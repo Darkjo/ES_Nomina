@@ -23,14 +23,15 @@ Partial Class FrmMenu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMenu))
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.MarcadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InicioDeSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IniciarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MarcadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SoloAdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -52,7 +53,7 @@ Partial Class FrmMenu
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Bernard MT Condensed", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 194)
+        Me.Label1.Location = New System.Drawing.Point(693, 172)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(237, 95)
         Me.Label1.TabIndex = 1
@@ -66,7 +67,7 @@ Partial Class FrmMenu
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Bernard MT Condensed", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 73)
+        Me.Label2.Location = New System.Drawing.Point(693, 67)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(246, 95)
         Me.Label2.TabIndex = 2
@@ -74,20 +75,33 @@ Partial Class FrmMenu
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.Left
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MarcadoToolStripMenuItem, Me.InicioDeSesiónToolStripMenuItem, Me.ConsultaToolStripMenuItem, Me.ReporteToolStripMenuItem, Me.AdminToolStripMenuItem, Me.CerrarSesionToolStripMenuItem, Me.SalirStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(951, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(114, 642)
         Me.MenuStrip1.TabIndex = 4
         Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'MarcadoToolStripMenuItem
+        '
+        Me.MarcadoToolStripMenuItem.Image = CType(resources.GetObject("MarcadoToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.MarcadoToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.MarcadoToolStripMenuItem.Name = "MarcadoToolStripMenuItem"
+        Me.MarcadoToolStripMenuItem.Size = New System.Drawing.Size(101, 72)
+        Me.MarcadoToolStripMenuItem.Text = "Marcado"
+        Me.MarcadoToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'InicioDeSesiónToolStripMenuItem
         '
         Me.InicioDeSesiónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IniciarToolStripMenuItem})
+        Me.InicioDeSesiónToolStripMenuItem.Image = CType(resources.GetObject("InicioDeSesiónToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.InicioDeSesiónToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.InicioDeSesiónToolStripMenuItem.Name = "InicioDeSesiónToolStripMenuItem"
-        Me.InicioDeSesiónToolStripMenuItem.Size = New System.Drawing.Size(88, 24)
-        Me.InicioDeSesiónToolStripMenuItem.Text = "Catalogos"
+        Me.InicioDeSesiónToolStripMenuItem.Size = New System.Drawing.Size(101, 72)
+        Me.InicioDeSesiónToolStripMenuItem.Text = "Catálogos"
+        Me.InicioDeSesiónToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'IniciarToolStripMenuItem
         '
@@ -95,18 +109,15 @@ Partial Class FrmMenu
         Me.IniciarToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.IniciarToolStripMenuItem.Text = "Usuarios"
         '
-        'MarcadoToolStripMenuItem
-        '
-        Me.MarcadoToolStripMenuItem.Name = "MarcadoToolStripMenuItem"
-        Me.MarcadoToolStripMenuItem.Size = New System.Drawing.Size(80, 24)
-        Me.MarcadoToolStripMenuItem.Text = "Marcado"
-        '
         'ConsultaToolStripMenuItem
         '
         Me.ConsultaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SoloAdminToolStripMenuItem})
+        Me.ConsultaToolStripMenuItem.Image = CType(resources.GetObject("ConsultaToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ConsultaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ConsultaToolStripMenuItem.Name = "ConsultaToolStripMenuItem"
-        Me.ConsultaToolStripMenuItem.Size = New System.Drawing.Size(78, 24)
+        Me.ConsultaToolStripMenuItem.Size = New System.Drawing.Size(101, 72)
         Me.ConsultaToolStripMenuItem.Text = "Consulta"
+        Me.ConsultaToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'SoloAdminToolStripMenuItem
         '
@@ -117,9 +128,12 @@ Partial Class FrmMenu
         'ReporteToolStripMenuItem
         '
         Me.ReporteToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SoloAdminToolStripMenuItem1})
+        Me.ReporteToolStripMenuItem.Image = CType(resources.GetObject("ReporteToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ReporteToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ReporteToolStripMenuItem.Name = "ReporteToolStripMenuItem"
-        Me.ReporteToolStripMenuItem.Size = New System.Drawing.Size(74, 24)
+        Me.ReporteToolStripMenuItem.Size = New System.Drawing.Size(101, 72)
         Me.ReporteToolStripMenuItem.Text = "Reporte"
+        Me.ReporteToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'SoloAdminToolStripMenuItem1
         '
@@ -130,9 +144,12 @@ Partial Class FrmMenu
         'AdminToolStripMenuItem
         '
         Me.AdminToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RespaldoToolStripMenuItem, Me.CambioDeContraseñaToolStripMenuItem, Me.GestionDeUsuarioToolStripMenuItem})
+        Me.AdminToolStripMenuItem.Image = CType(resources.GetObject("AdminToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.AdminToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.AdminToolStripMenuItem.Name = "AdminToolStripMenuItem"
-        Me.AdminToolStripMenuItem.Size = New System.Drawing.Size(65, 24)
+        Me.AdminToolStripMenuItem.Size = New System.Drawing.Size(108, 72)
         Me.AdminToolStripMenuItem.Text = "Admin"
+        Me.AdminToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'RespaldoToolStripMenuItem
         '
@@ -154,16 +171,22 @@ Partial Class FrmMenu
         '
         'CerrarSesionToolStripMenuItem
         '
+        Me.CerrarSesionToolStripMenuItem.Image = CType(resources.GetObject("CerrarSesionToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.CerrarSesionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.CerrarSesionToolStripMenuItem.Name = "CerrarSesionToolStripMenuItem"
-        Me.CerrarSesionToolStripMenuItem.Size = New System.Drawing.Size(108, 24)
+        Me.CerrarSesionToolStripMenuItem.Size = New System.Drawing.Size(108, 72)
         Me.CerrarSesionToolStripMenuItem.Text = "Cerrar Sesion"
+        Me.CerrarSesionToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'SalirStripMenuItem1
         '
+        Me.SalirStripMenuItem1.Image = CType(resources.GetObject("SalirStripMenuItem1.Image"), System.Drawing.Image)
+        Me.SalirStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.SalirStripMenuItem1.Name = "SalirStripMenuItem1"
         Me.SalirStripMenuItem1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.SalirStripMenuItem1.Size = New System.Drawing.Size(50, 24)
+        Me.SalirStripMenuItem1.Size = New System.Drawing.Size(108, 72)
         Me.SalirStripMenuItem1.Text = "Salir"
+        Me.SalirStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'FrmMenu
         '
@@ -178,7 +201,6 @@ Partial Class FrmMenu
         Me.Name = "FrmMenu"
         Me.RightToLeftLayout = True
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "MenuPrincipal"
         Me.TopMost = True
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
