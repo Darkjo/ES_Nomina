@@ -30,14 +30,15 @@ Partial Class FrmMenu
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.InicioDeSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IniciarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ConsultaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MarcadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClickMevToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SoloAdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SoloAdminToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.AdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RespaldoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClickMevToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SoloAdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SoloAdminToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CambioDeContraseñaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -89,22 +90,8 @@ Partial Class FrmMenu
         'IniciarToolStripMenuItem
         '
         Me.IniciarToolStripMenuItem.Name = "IniciarToolStripMenuItem"
-        Me.IniciarToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.IniciarToolStripMenuItem.Size = New System.Drawing.Size(124, 26)
         Me.IniciarToolStripMenuItem.Text = "Iniciar"
-        '
-        'ReporteToolStripMenuItem
-        '
-        Me.ReporteToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SoloAdminToolStripMenuItem1})
-        Me.ReporteToolStripMenuItem.Name = "ReporteToolStripMenuItem"
-        Me.ReporteToolStripMenuItem.Size = New System.Drawing.Size(74, 24)
-        Me.ReporteToolStripMenuItem.Text = "Reporte"
-        '
-        'ConsultaToolStripMenuItem
-        '
-        Me.ConsultaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SoloAdminToolStripMenuItem})
-        Me.ConsultaToolStripMenuItem.Name = "ConsultaToolStripMenuItem"
-        Me.ConsultaToolStripMenuItem.Size = New System.Drawing.Size(78, 24)
-        Me.ConsultaToolStripMenuItem.Text = "Consulta"
         '
         'MarcadoToolStripMenuItem
         '
@@ -113,9 +100,41 @@ Partial Class FrmMenu
         Me.MarcadoToolStripMenuItem.Size = New System.Drawing.Size(80, 24)
         Me.MarcadoToolStripMenuItem.Text = "Marcado"
         '
+        'ClickMevToolStripMenuItem
+        '
+        Me.ClickMevToolStripMenuItem.Name = "ClickMevToolStripMenuItem"
+        Me.ClickMevToolStripMenuItem.Size = New System.Drawing.Size(154, 26)
+        Me.ClickMevToolStripMenuItem.Text = "Click me :v"
+        '
+        'ConsultaToolStripMenuItem
+        '
+        Me.ConsultaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SoloAdminToolStripMenuItem})
+        Me.ConsultaToolStripMenuItem.Name = "ConsultaToolStripMenuItem"
+        Me.ConsultaToolStripMenuItem.Size = New System.Drawing.Size(78, 24)
+        Me.ConsultaToolStripMenuItem.Text = "Consulta"
+        '
+        'SoloAdminToolStripMenuItem
+        '
+        Me.SoloAdminToolStripMenuItem.Name = "SoloAdminToolStripMenuItem"
+        Me.SoloAdminToolStripMenuItem.Size = New System.Drawing.Size(160, 26)
+        Me.SoloAdminToolStripMenuItem.Text = "Solo admin"
+        '
+        'ReporteToolStripMenuItem
+        '
+        Me.ReporteToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SoloAdminToolStripMenuItem1})
+        Me.ReporteToolStripMenuItem.Name = "ReporteToolStripMenuItem"
+        Me.ReporteToolStripMenuItem.Size = New System.Drawing.Size(74, 24)
+        Me.ReporteToolStripMenuItem.Text = "Reporte"
+        '
+        'SoloAdminToolStripMenuItem1
+        '
+        Me.SoloAdminToolStripMenuItem1.Name = "SoloAdminToolStripMenuItem1"
+        Me.SoloAdminToolStripMenuItem1.Size = New System.Drawing.Size(160, 26)
+        Me.SoloAdminToolStripMenuItem1.Text = "Solo admin"
+        '
         'AdminToolStripMenuItem
         '
-        Me.AdminToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RespaldoToolStripMenuItem})
+        Me.AdminToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RespaldoToolStripMenuItem, Me.CambioDeContraseñaToolStripMenuItem})
         Me.AdminToolStripMenuItem.Name = "AdminToolStripMenuItem"
         Me.AdminToolStripMenuItem.Size = New System.Drawing.Size(65, 24)
         Me.AdminToolStripMenuItem.Text = "Admin"
@@ -126,25 +145,13 @@ Partial Class FrmMenu
         Me.RespaldoToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.RespaldoToolStripMenuItem.Text = "Respaldo"
         '
-        'ClickMevToolStripMenuItem
+        'CambioDeContraseñaToolStripMenuItem
         '
-        Me.ClickMevToolStripMenuItem.Name = "ClickMevToolStripMenuItem"
-        Me.ClickMevToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
-        Me.ClickMevToolStripMenuItem.Text = "Click me :v"
+        Me.CambioDeContraseñaToolStripMenuItem.Name = "CambioDeContraseñaToolStripMenuItem"
+        Me.CambioDeContraseñaToolStripMenuItem.Size = New System.Drawing.Size(235, 26)
+        Me.CambioDeContraseñaToolStripMenuItem.Text = "Cambio de Contraseña"
         '
-        'SoloAdminToolStripMenuItem
-        '
-        Me.SoloAdminToolStripMenuItem.Name = "SoloAdminToolStripMenuItem"
-        Me.SoloAdminToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
-        Me.SoloAdminToolStripMenuItem.Text = "Solo admin"
-        '
-        'SoloAdminToolStripMenuItem1
-        '
-        Me.SoloAdminToolStripMenuItem1.Name = "SoloAdminToolStripMenuItem1"
-        Me.SoloAdminToolStripMenuItem1.Size = New System.Drawing.Size(181, 26)
-        Me.SoloAdminToolStripMenuItem1.Text = "Solo admin"
-        '
-        'Catalogo
+        'FrmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -154,7 +161,7 @@ Partial Class FrmMenu
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "Catalogo"
+        Me.Name = "FrmMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MenuPrincipal"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -179,4 +186,5 @@ Partial Class FrmMenu
     Friend WithEvents ClickMevToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SoloAdminToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SoloAdminToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents CambioDeContraseñaToolStripMenuItem As ToolStripMenuItem
 End Class
