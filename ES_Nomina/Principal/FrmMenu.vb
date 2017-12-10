@@ -10,4 +10,5 @@
     Private Sub InicioDeSesiónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InicioDeSesiónToolStripMenuItem.Click
 
     End Sub
+
 End Class
