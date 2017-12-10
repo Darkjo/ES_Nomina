@@ -6,4 +6,8 @@
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         Label2.Text = DateTime.Now.ToString("dd") + "/" + Format(Now, "MMMM") + "/" + DateTime.Now.ToString("yy")
     End Sub
+
+    Private Sub InicioDeSesiónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InicioDeSesiónToolStripMenuItem.Click
+
+    End Sub
 End Class
