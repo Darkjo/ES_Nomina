@@ -50,7 +50,7 @@ Partial Class FrmMenu
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Bernard MT Condensed", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 181)
+        Me.Label1.Location = New System.Drawing.Point(12, 194)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(237, 95)
         Me.Label1.TabIndex = 1
@@ -76,7 +76,7 @@ Partial Class FrmMenu
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioDeSesiónToolStripMenuItem, Me.MarcadoToolStripMenuItem, Me.ConsultaToolStripMenuItem, Me.ReporteToolStripMenuItem, Me.AdminToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(522, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(951, 28)
         Me.MenuStrip1.TabIndex = 4
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -142,7 +142,7 @@ Partial Class FrmMenu
         'RespaldoToolStripMenuItem
         '
         Me.RespaldoToolStripMenuItem.Name = "RespaldoToolStripMenuItem"
-        Me.RespaldoToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.RespaldoToolStripMenuItem.Size = New System.Drawing.Size(235, 26)
         Me.RespaldoToolStripMenuItem.Text = "Respaldo"
         '
         'CambioDeContraseñaToolStripMenuItem
@@ -155,7 +155,7 @@ Partial Class FrmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(522, 380)
+        Me.ClientSize = New System.Drawing.Size(951, 642)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
@@ -164,6 +164,7 @@ Partial Class FrmMenu
         Me.Name = "FrmMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MenuPrincipal"
+        Me.TopMost = True
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
