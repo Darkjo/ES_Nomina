@@ -35,7 +35,7 @@ Partial Class SplashScreen
         Me.ProgressBar1.Location = New System.Drawing.Point(1, 290)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(658, 23)
-        Me.ProgressBar1.Step = 5
+        Me.ProgressBar1.Step = 1
         Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         Me.ProgressBar1.TabIndex = 0
         Me.ProgressBar1.Value = 100

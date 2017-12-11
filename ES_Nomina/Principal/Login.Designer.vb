@@ -22,6 +22,7 @@ Partial Class Login
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -32,6 +33,12 @@ Partial Class Login
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.EsNomina1 = New ES_Nomina.ESNomina()
+        Me.EmpleadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EmpleadosTableAdapter = New ES_Nomina.ESNominaTableAdapters.EmpleadosTableAdapter()
+        Me.TableAdapterManager = New ES_Nomina.ESNominaTableAdapters.TableAdapterManager()
+        CType(Me.EsNomina1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -76,7 +83,7 @@ Partial Class Login
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(70, 218)
+        Me.Button1.Location = New System.Drawing.Point(69, 221)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(169, 38)
         Me.Button1.TabIndex = 4
@@ -88,7 +95,7 @@ Partial Class Login
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(289, 218)
+        Me.Button2.Location = New System.Drawing.Point(292, 221)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(168, 38)
         Me.Button2.TabIndex = 5
@@ -101,7 +108,7 @@ Partial Class Login
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(533, 282)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(533, 288)
         Me.ShapeContainer1.TabIndex = 6
         Me.ShapeContainer1.TabStop = False
         '
@@ -112,9 +119,9 @@ Partial Class Login
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RectangleShape1.BorderWidth = 2
         Me.RectangleShape1.CornerRadius = 3
-        Me.RectangleShape1.Location = New System.Drawing.Point(55, 45)
+        Me.RectangleShape1.Location = New System.Drawing.Point(41, 15)
         Me.RectangleShape1.Name = "RectangleShape1"
-        Me.RectangleShape1.Size = New System.Drawing.Size(418, 161)
+        Me.RectangleShape1.Size = New System.Drawing.Size(450, 200)
         '
         'CheckBox1
         '
@@ -127,11 +134,31 @@ Partial Class Login
         Me.CheckBox1.Text = "Mostrar contraseña"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
+        'EsNomina1
+        '
+        Me.EsNomina1.DataSetName = "ESNomina"
+        Me.EsNomina1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'EmpleadosBindingSource
+        '
+        Me.EmpleadosBindingSource.DataMember = "Empleados"
+        Me.EmpleadosBindingSource.DataSource = Me.EsNomina1
+        '
+        'EmpleadosTableAdapter
+        '
+        Me.EmpleadosTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.EmpleadosTableAdapter = Me.EmpleadosTableAdapter
+        Me.TableAdapterManager.UpdateOrder = ES_Nomina.ESNominaTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(533, 282)
+        Me.ClientSize = New System.Drawing.Size(533, 288)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -144,6 +171,8 @@ Partial Class Login
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Iniciar Sesion"
+        CType(Me.EsNomina1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -158,4 +187,21 @@ Partial Class Login
     Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
     Friend WithEvents RectangleShape1 As PowerPacks.RectangleShape
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents EsNomina1 As ESNomina
+    Friend WithEvents EmpleadosBindingSource As BindingSource
+    Friend WithEvents EmpleadosTableAdapter As ESNominaTableAdapters.EmpleadosTableAdapter
+    Friend WithEvents TableAdapterManager As ESNominaTableAdapters.TableAdapterManager
+    Friend WithEvents EmpleadosBindingNavigator As BindingNavigator
+    Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
+    Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
+    Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMoveFirstItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMovePreviousItem As ToolStripButton
+    Friend WithEvents BindingNavigatorSeparator As ToolStripSeparator
+    Friend WithEvents BindingNavigatorPositionItem As ToolStripTextBox
+    Friend WithEvents BindingNavigatorSeparator1 As ToolStripSeparator
+    Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
+    Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
+    Friend WithEvents EmpleadosBindingNavigatorSaveItem As ToolStripButton
 End Class
