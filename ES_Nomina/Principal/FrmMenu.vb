@@ -33,4 +33,16 @@
         Login.MdiParent = Me
         Login.Show()
     End Sub
+
+    Private Sub menuMarcado_Click(sender As Object, e As EventArgs) Handles menuMarcado.Click
+        Dim Marcado As New FrmMarcado()
+        Marcado.MdiParent = Me
+        Marcado.Show()
+    End Sub
+
+    Private Sub GestionDeUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionDeUsuarioToolStripMenuItem.Click
+        Dim Usuarios As New FrmUsuario()
+        Usuarios.MdiParent = Me
+        Usuarios.Show()
+    End Sub
 End Class

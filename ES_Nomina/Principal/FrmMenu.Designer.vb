@@ -42,9 +42,9 @@ Partial Class FrmMenu
         Me.menuReportes = New System.Windows.Forms.ToolStripMenuItem()
         Me.SoloAdminToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuAdmin = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RespaldoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CambioDeContraseñaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GestionDeUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CambioDeContraseñaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RespaldoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.cerrarSesion = New System.Windows.Forms.ToolStripMenuItem()
         Me.opcionSalir = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
@@ -57,8 +57,10 @@ Partial Class FrmMenu
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Bernard MT Condensed", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(693, 172)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(778, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(237, 95)
         Me.Label1.TabIndex = 1
@@ -71,8 +73,10 @@ Partial Class FrmMenu
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Bernard MT Condensed", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(693, 67)
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(166, 9)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(246, 95)
         Me.Label2.TabIndex = 2
@@ -86,7 +90,7 @@ Partial Class FrmMenu
         Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(114, 644)
+        Me.MenuStrip1.Size = New System.Drawing.Size(114, 581)
         Me.MenuStrip1.TabIndex = 4
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -107,7 +111,7 @@ Partial Class FrmMenu
         Me.menuCatalogos.Image = CType(resources.GetObject("menuCatalogos.Image"), System.Drawing.Image)
         Me.menuCatalogos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.menuCatalogos.Name = "menuCatalogos"
-        Me.menuCatalogos.Size = New System.Drawing.Size(101, 72)
+        Me.menuCatalogos.Size = New System.Drawing.Size(108, 72)
         Me.menuCatalogos.Text = "Catálogos"
         Me.menuCatalogos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -142,7 +146,7 @@ Partial Class FrmMenu
         Me.menuConsultas.Image = CType(resources.GetObject("menuConsultas.Image"), System.Drawing.Image)
         Me.menuConsultas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.menuConsultas.Name = "menuConsultas"
-        Me.menuConsultas.Size = New System.Drawing.Size(101, 72)
+        Me.menuConsultas.Size = New System.Drawing.Size(108, 72)
         Me.menuConsultas.Text = "Consulta"
         Me.menuConsultas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -159,7 +163,7 @@ Partial Class FrmMenu
         Me.menuReportes.Image = CType(resources.GetObject("menuReportes.Image"), System.Drawing.Image)
         Me.menuReportes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.menuReportes.Name = "menuReportes"
-        Me.menuReportes.Size = New System.Drawing.Size(101, 72)
+        Me.menuReportes.Size = New System.Drawing.Size(108, 72)
         Me.menuReportes.Text = "Reporte"
         Me.menuReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -176,21 +180,9 @@ Partial Class FrmMenu
         Me.menuAdmin.Image = CType(resources.GetObject("menuAdmin.Image"), System.Drawing.Image)
         Me.menuAdmin.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.menuAdmin.Name = "menuAdmin"
-        Me.menuAdmin.Size = New System.Drawing.Size(101, 72)
+        Me.menuAdmin.Size = New System.Drawing.Size(108, 72)
         Me.menuAdmin.Text = "Admin"
         Me.menuAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'RespaldoToolStripMenuItem
-        '
-        Me.RespaldoToolStripMenuItem.Name = "RespaldoToolStripMenuItem"
-        Me.RespaldoToolStripMenuItem.Size = New System.Drawing.Size(235, 26)
-        Me.RespaldoToolStripMenuItem.Text = "Respaldo BD"
-        '
-        'CambioDeContraseñaToolStripMenuItem
-        '
-        Me.CambioDeContraseñaToolStripMenuItem.Name = "CambioDeContraseñaToolStripMenuItem"
-        Me.CambioDeContraseñaToolStripMenuItem.Size = New System.Drawing.Size(235, 26)
-        Me.CambioDeContraseñaToolStripMenuItem.Text = "Cambio de Contraseña"
         '
         'GestionDeUsuarioToolStripMenuItem
         '
@@ -198,12 +190,24 @@ Partial Class FrmMenu
         Me.GestionDeUsuarioToolStripMenuItem.Size = New System.Drawing.Size(235, 26)
         Me.GestionDeUsuarioToolStripMenuItem.Text = "Gestion de usuario"
         '
+        'CambioDeContraseñaToolStripMenuItem
+        '
+        Me.CambioDeContraseñaToolStripMenuItem.Name = "CambioDeContraseñaToolStripMenuItem"
+        Me.CambioDeContraseñaToolStripMenuItem.Size = New System.Drawing.Size(235, 26)
+        Me.CambioDeContraseñaToolStripMenuItem.Text = "Cambio de Contraseña"
+        '
+        'RespaldoToolStripMenuItem
+        '
+        Me.RespaldoToolStripMenuItem.Name = "RespaldoToolStripMenuItem"
+        Me.RespaldoToolStripMenuItem.Size = New System.Drawing.Size(235, 26)
+        Me.RespaldoToolStripMenuItem.Text = "Respaldo BD"
+        '
         'cerrarSesion
         '
         Me.cerrarSesion.Image = CType(resources.GetObject("cerrarSesion.Image"), System.Drawing.Image)
         Me.cerrarSesion.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.cerrarSesion.Name = "cerrarSesion"
-        Me.cerrarSesion.Size = New System.Drawing.Size(101, 72)
+        Me.cerrarSesion.Size = New System.Drawing.Size(108, 72)
         Me.cerrarSesion.Text = "Cerrar Sesion"
         Me.cerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -213,7 +217,7 @@ Partial Class FrmMenu
         Me.opcionSalir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.opcionSalir.Name = "opcionSalir"
         Me.opcionSalir.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.opcionSalir.Size = New System.Drawing.Size(101, 72)
+        Me.opcionSalir.Size = New System.Drawing.Size(108, 72)
         Me.opcionSalir.Text = "Salir"
         Me.opcionSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -221,10 +225,11 @@ Partial Class FrmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(968, 644)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.ClientSize = New System.Drawing.Size(1136, 581)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Label2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1

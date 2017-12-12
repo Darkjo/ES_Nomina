@@ -35,7 +35,7 @@ Public Class Login
             Exit Sub
         End If
 
-        Me.EmpleadosTableAdapter.LoginEmp(TextBox1.Text, TextBox2.Text)
+        Me.EmpleadosTableAdapter.ConsultaUsuario(EsNomina1.Empleados, TextBox1.Text, TextBox2.Text)
         If EsNomina1.Empleados.Count() = 0 Then
             MessageBox.Show("Datos incorrectos. Intente nuevamente.", "ESNomina", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
@@ -49,7 +49,7 @@ Public Class Login
             Try
                 'CONEXION A LA BASE DE DATOS
                 Dim DS As New DataSet
-                Dim DA As New SqlDataAdapter("SELECT * FROM empleados Where Username='" & TextBox1.Text & "' AND PassEmpleado='" & TextBox2.Text & "' ", CONN)
+                Dim DA As New SqlDataAdapter("SELECT * FROM Empleados WHERE Username='" & TextBox1.Text & "' AND PassEmpleado='" & TextBox2.Text & "' ", CONN)
                 Dim DR As DataRow
                 DA.Fill(DS)
                 DR = DS.Tables(0).Rows(0)
@@ -87,7 +87,7 @@ Public Class Login
 
             Catch ex As Exception
 
-                MessageBox.Show("Usuario o Contrtaseña incorrectas", "ESNomina", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("Verifique si el usuario esta Activo o consulte con el administrador del sistema.", "ESNomina", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 TextBox1.Focus()
                 Exit Sub
 
