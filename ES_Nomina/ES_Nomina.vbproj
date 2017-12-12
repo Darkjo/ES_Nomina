@@ -50,6 +50,8 @@
     <ApplicationIcon>Resources\ES_NominaLogo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -78,6 +80,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\FrmBackUp.Designer.vb">
+      <DependentUpon>FrmBackUp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmBackUp.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin\FrmCambioClave.Designer.vb">
       <DependentUpon>FrmCambioClave.vb</DependentUpon>
     </Compile>
@@ -137,6 +145,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Admin\FrmBackUp.resx">
+      <DependentUpon>FrmBackUp.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\FrmCambioClave.resx">
       <DependentUpon>FrmCambioClave.vb</DependentUpon>
     </EmbeddedResource>
@@ -189,7 +200,9 @@
   <ItemGroup>
     <Content Include="Resources\018_153_arrow_exit_logout-48.png" />
     <Content Include="Resources\Admin-01-48.png" />
+    <Content Include="Resources\Base de Datos.png" />
     <Content Include="Resources\check_shield-48.png" />
+    <Content Include="Resources\data-backup.png" />
     <Content Include="Resources\document-query-48.png" />
     <Content Include="Resources\ES_NominaLogo.ico" />
     <Content Include="Resources\if_go-home_118770.ico" />

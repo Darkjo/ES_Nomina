@@ -51,4 +51,10 @@
         Cambio.MdiParent = Me
         Cambio.Show()
     End Sub
+
+    Private Sub RespaldoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RespaldoToolStripMenuItem.Click
+        Dim BackUp As New FrmBackUp()
+        BackUp.MdiParent = Me
+        BackUp.Show()
+    End Sub
 End Class
