@@ -78,6 +78,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\FrmCambioClave.Designer.vb">
+      <DependentUpon>FrmCambioClave.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmCambioClave.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin\FrmUsuarios.Designer.vb">
       <DependentUpon>FrmUsuarios.vb</DependentUpon>
     </Compile>
@@ -131,6 +137,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Admin\FrmCambioClave.resx">
+      <DependentUpon>FrmCambioClave.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.vb</DependentUpon>
     </EmbeddedResource>

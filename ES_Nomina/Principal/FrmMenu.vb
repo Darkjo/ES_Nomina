@@ -45,4 +45,10 @@
         Usuarios.MdiParent = Me
         Usuarios.Show()
     End Sub
+
+    Private Sub CambioDeContraseñaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CambioDeContraseñaToolStripMenuItem.Click
+        Dim Cambio As New FrmCambioClave()
+        Cambio.MdiParent = Me
+        Cambio.Show()
+    End Sub
 End Class

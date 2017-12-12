@@ -90,7 +90,7 @@ Partial Class FrmMenu
         Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(114, 581)
+        Me.MenuStrip1.Size = New System.Drawing.Size(121, 581)
         Me.MenuStrip1.TabIndex = 4
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -100,7 +100,7 @@ Partial Class FrmMenu
         Me.menuMarcado.Image = CType(resources.GetObject("menuMarcado.Image"), System.Drawing.Image)
         Me.menuMarcado.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.menuMarcado.Name = "menuMarcado"
-        Me.menuMarcado.Size = New System.Drawing.Size(101, 72)
+        Me.menuMarcado.Size = New System.Drawing.Size(108, 72)
         Me.menuMarcado.Text = "Marcado"
         Me.menuMarcado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -153,7 +153,7 @@ Partial Class FrmMenu
         'SoloAdminToolStripMenuItem
         '
         Me.SoloAdminToolStripMenuItem.Name = "SoloAdminToolStripMenuItem"
-        Me.SoloAdminToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.SoloAdminToolStripMenuItem.Size = New System.Drawing.Size(160, 26)
         Me.SoloAdminToolStripMenuItem.Text = "Solo admin"
         '
         'menuReportes
@@ -170,7 +170,7 @@ Partial Class FrmMenu
         'SoloAdminToolStripMenuItem1
         '
         Me.SoloAdminToolStripMenuItem1.Name = "SoloAdminToolStripMenuItem1"
-        Me.SoloAdminToolStripMenuItem1.Size = New System.Drawing.Size(181, 26)
+        Me.SoloAdminToolStripMenuItem1.Size = New System.Drawing.Size(160, 26)
         Me.SoloAdminToolStripMenuItem1.Text = "Solo admin"
         '
         'menuAdmin
