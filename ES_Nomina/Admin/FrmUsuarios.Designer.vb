@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class FrmUsuario
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class FrmUsuarios
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,29 +20,33 @@ Partial Class FrmUsuario
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUsuario))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUsuarios))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
         Me.CheckBox5 = New System.Windows.Forms.CheckBox()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.IdEmpleadosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PassEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -54,125 +58,99 @@ Partial Class FrmUsuario
         Me.ConsultaDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.ReporteDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.AdministradorDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.EmpleadosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ESNomina1 = New ES_Nomina.ESNomina()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.EmpleadosTableAdapter1 = New ES_Nomina.ESNominaTableAdapters.EmpleadosTableAdapter()
-        Me.TableAdapterManager1 = New ES_Nomina.ESNominaTableAdapters.TableAdapterManager()
+        Me.EmpleadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ESNomina = New ES_Nomina.ESNomina()
+        Me.ESNominaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EmpleadosTableAdapter = New ES_Nomina.ESNominaTableAdapters.EmpleadosTableAdapter()
+        Me.TableAdapterManager = New ES_Nomina.ESNominaTableAdapters.TableAdapterManager()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmpleadosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ESNomina1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ESNomina, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ESNominaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(24, 22)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(63, 51)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(285, 32)
+        Me.Label1.Size = New System.Drawing.Size(74, 24)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Manejo de Usuarios"
+        Me.Label1.Text = "Usuario"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(27, 86)
+        Me.Label2.Location = New System.Drawing.Point(64, 98)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(74, 24)
+        Me.Label2.Size = New System.Drawing.Size(57, 24)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Usuario"
+        Me.Label2.Text = "Clave"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(26, 137)
+        Me.Label3.Location = New System.Drawing.Point(64, 145)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(106, 24)
+        Me.Label3.Size = New System.Drawing.Size(165, 24)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Contraseña"
+        Me.Label3.Text = "Nombre Completo"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(26, 181)
+        Me.Label4.Location = New System.Drawing.Point(366, 51)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(165, 24)
+        Me.Label4.Size = New System.Drawing.Size(85, 24)
         Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Nombre Completo"
+        Me.Label4.Text = "Telefono"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(410, 87)
+        Me.Label5.Location = New System.Drawing.Point(369, 98)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(85, 24)
+        Me.Label5.Size = New System.Drawing.Size(70, 24)
         Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Telefono"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(410, 132)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(70, 24)
-        Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Sueldo"
+        Me.Label5.Text = "Sueldo"
         '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(512, 179)
+        Me.CheckBox1.Location = New System.Drawing.Point(530, 315)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(90, 28)
-        Me.CheckBox1.TabIndex = 6
+        Me.CheckBox1.TabIndex = 5
         Me.CheckBox1.Text = "Estado"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.CheckBox6)
         Me.GroupBox1.Controls.Add(Me.CheckBox5)
         Me.GroupBox1.Controls.Add(Me.CheckBox4)
         Me.GroupBox1.Controls.Add(Me.CheckBox3)
         Me.GroupBox1.Controls.Add(Me.CheckBox2)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(30, 233)
+        Me.GroupBox1.Location = New System.Drawing.Point(67, 196)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(647, 75)
-        Me.GroupBox1.TabIndex = 7
+        Me.GroupBox1.Size = New System.Drawing.Size(561, 87)
+        Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Permisos en Menu"
-        '
-        'CheckBox6
-        '
-        Me.CheckBox6.AutoSize = True
-        Me.CheckBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox6.Location = New System.Drawing.Point(482, 35)
-        Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(148, 28)
-        Me.CheckBox6.TabIndex = 4
-        Me.CheckBox6.Text = "Administrador"
-        Me.CheckBox6.UseVisualStyleBackColor = True
+        Me.GroupBox1.Text = "Permisos de Usuario"
         '
         'CheckBox5
         '
         Me.CheckBox5.AutoSize = True
         Me.CheckBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox5.Location = New System.Drawing.Point(368, 35)
+        Me.CheckBox5.Location = New System.Drawing.Point(346, 37)
         Me.CheckBox5.Name = "CheckBox5"
         Me.CheckBox5.Size = New System.Drawing.Size(108, 28)
         Me.CheckBox5.TabIndex = 3
@@ -183,18 +161,18 @@ Partial Class FrmUsuario
         '
         Me.CheckBox4.AutoSize = True
         Me.CheckBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox4.Location = New System.Drawing.Point(248, 35)
+        Me.CheckBox4.Location = New System.Drawing.Point(235, 37)
         Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(114, 28)
+        Me.CheckBox4.Size = New System.Drawing.Size(105, 28)
         Me.CheckBox4.TabIndex = 2
-        Me.CheckBox4.Text = "Consultas"
+        Me.CheckBox4.Text = "Consulta"
         Me.CheckBox4.UseVisualStyleBackColor = True
         '
         'CheckBox3
         '
         Me.CheckBox3.AutoSize = True
         Me.CheckBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox3.Location = New System.Drawing.Point(119, 35)
+        Me.CheckBox3.Location = New System.Drawing.Point(114, 37)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(115, 28)
         Me.CheckBox3.TabIndex = 1
@@ -205,62 +183,69 @@ Partial Class FrmUsuario
         '
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox2.Location = New System.Drawing.Point(7, 35)
+        Me.CheckBox2.Location = New System.Drawing.Point(7, 37)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(106, 28)
         Me.CheckBox2.TabIndex = 0
         Me.CheckBox2.Text = "Marcado"
         Me.CheckBox2.UseVisualStyleBackColor = True
         '
+        'CheckBox6
+        '
+        Me.CheckBox6.AutoSize = True
+        Me.CheckBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox6.Location = New System.Drawing.Point(530, 236)
+        Me.CheckBox6.Name = "CheckBox6"
+        Me.CheckBox6.Size = New System.Drawing.Size(87, 28)
+        Me.CheckBox6.TabIndex = 4
+        Me.CheckBox6.Text = "Admin"
+        Me.CheckBox6.UseVisualStyleBackColor = True
+        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(30, 325)
+        Me.Button1.Location = New System.Drawing.Point(67, 304)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(153, 44)
-        Me.Button1.TabIndex = 8
+        Me.Button1.Size = New System.Drawing.Size(108, 39)
+        Me.Button1.TabIndex = 7
         Me.Button1.Text = "Nuevo"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(189, 325)
+        Me.Button2.Location = New System.Drawing.Point(181, 304)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(137, 44)
-        Me.Button2.TabIndex = 9
+        Me.Button2.Size = New System.Drawing.Size(100, 39)
+        Me.Button2.TabIndex = 8
         Me.Button2.Text = "Guardar"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(330, 325)
+        Me.Button3.Location = New System.Drawing.Point(287, 304)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(165, 44)
-        Me.Button3.TabIndex = 10
+        Me.Button3.Size = New System.Drawing.Size(100, 39)
+        Me.Button3.TabIndex = 9
         Me.Button3.Text = "Eliminar"
         Me.Button3.UseVisualStyleBackColor = False
         '
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(498, 325)
+        Me.Button4.Location = New System.Drawing.Point(393, 304)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(179, 44)
-        Me.Button4.TabIndex = 11
+        Me.Button4.Size = New System.Drawing.Size(128, 39)
+        Me.Button4.TabIndex = 10
         Me.Button4.Text = "Reiniciar Clave"
         Me.Button4.UseVisualStyleBackColor = False
         '
@@ -270,21 +255,64 @@ Partial Class FrmUsuario
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdEmpleadosDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.PassEmpleadoDataGridViewTextBoxColumn, Me.NombreEmpleadoDataGridViewTextBoxColumn, Me.TelefonoEmpleadoDataGridViewTextBoxColumn, Me.SueldoDataGridViewTextBoxColumn, Me.EstadoDataGridViewCheckBoxColumn, Me.MarcadoDataGridViewCheckBoxColumn, Me.CatalogoDataGridViewCheckBoxColumn, Me.ConsultaDataGridViewCheckBoxColumn, Me.ReporteDataGridViewCheckBoxColumn, Me.AdministradorDataGridViewCheckBoxColumn})
-        Me.DataGridView1.DataSource = Me.EmpleadosBindingSource1
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 387)
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.UsernameDataGridViewTextBoxColumn, Me.PassEmpleadoDataGridViewTextBoxColumn, Me.NombreEmpleadoDataGridViewTextBoxColumn, Me.TelefonoEmpleadoDataGridViewTextBoxColumn, Me.SueldoDataGridViewTextBoxColumn, Me.EstadoDataGridViewCheckBoxColumn, Me.MarcadoDataGridViewCheckBoxColumn, Me.CatalogoDataGridViewCheckBoxColumn, Me.ConsultaDataGridViewCheckBoxColumn, Me.ReporteDataGridViewCheckBoxColumn, Me.AdministradorDataGridViewCheckBoxColumn})
+        Me.DataGridView1.DataSource = Me.EmpleadosBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(36, 392)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(1109, 276)
-        Me.DataGridView1.TabIndex = 12
+        Me.DataGridView1.Size = New System.Drawing.Size(960, 285)
+        Me.DataGridView1.TabIndex = 11
         '
-        'IdEmpleadosDataGridViewTextBoxColumn
+        'PictureBox1
         '
-        Me.IdEmpleadosDataGridViewTextBoxColumn.DataPropertyName = "idEmpleados"
-        Me.IdEmpleadosDataGridViewTextBoxColumn.HeaderText = "idEmpleados"
-        Me.IdEmpleadosDataGridViewTextBoxColumn.Name = "IdEmpleadosDataGridViewTextBoxColumn"
-        Me.IdEmpleadosDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(654, 54)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(342, 289)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 12
+        Me.PictureBox1.TabStop = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(141, 47)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(219, 28)
+        Me.TextBox1.TabIndex = 13
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(141, 94)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(219, 28)
+        Me.TextBox2.TabIndex = 14
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(235, 141)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(393, 28)
+        Me.TextBox3.TabIndex = 15
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.Location = New System.Drawing.Point(454, 47)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(174, 28)
+        Me.TextBox4.TabIndex = 16
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.Location = New System.Drawing.Point(454, 95)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(174, 28)
+        Me.TextBox5.TabIndex = 17
         '
         'UsernameDataGridViewTextBoxColumn
         '
@@ -363,95 +391,50 @@ Partial Class FrmUsuario
         Me.AdministradorDataGridViewCheckBoxColumn.Name = "AdministradorDataGridViewCheckBoxColumn"
         Me.AdministradorDataGridViewCheckBoxColumn.ReadOnly = True
         '
-        'EmpleadosBindingSource1
+        'EmpleadosBindingSource
         '
-        Me.EmpleadosBindingSource1.DataMember = "Empleados"
-        Me.EmpleadosBindingSource1.DataSource = Me.ESNomina1
+        Me.EmpleadosBindingSource.DataMember = "Empleados"
+        Me.EmpleadosBindingSource.DataSource = Me.ESNomina
         '
-        'ESNomina1
+        'ESNomina
         '
-        Me.ESNomina1.DataSetName = "ESNomina"
-        Me.ESNomina1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.ESNomina.DataSetName = "ESNomina"
+        Me.ESNomina.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'TextBox1
+        'ESNominaBindingSource
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(153, 82)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(251, 28)
-        Me.TextBox1.TabIndex = 13
+        Me.ESNominaBindingSource.DataSource = Me.ESNomina
+        Me.ESNominaBindingSource.Position = 0
         '
-        'TextBox2
+        'EmpleadosTableAdapter
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(153, 133)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(251, 28)
-        Me.TextBox2.TabIndex = 14
+        Me.EmpleadosTableAdapter.ClearBeforeFill = True
         '
-        'TextBox3
+        'TableAdapterManager
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(197, 177)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(298, 28)
-        Me.TextBox3.TabIndex = 15
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.EmpleadosTableAdapter = Me.EmpleadosTableAdapter
+        Me.TableAdapterManager.UpdateOrder = ES_Nomina.ESNominaTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'TextBox4
-        '
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(502, 82)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(158, 28)
-        Me.TextBox4.TabIndex = 16
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(502, 128)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(158, 28)
-        Me.TextBox5.TabIndex = 17
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(741, 58)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(380, 311)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 18
-        Me.PictureBox1.TabStop = False
-        '
-        'EmpleadosTableAdapter1
-        '
-        Me.EmpleadosTableAdapter1.ClearBeforeFill = True
-        '
-        'TableAdapterManager1
-        '
-        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager1.EmpleadosTableAdapter = Me.EmpleadosTableAdapter1
-        Me.TableAdapterManager1.UpdateOrder = ES_Nomina.ESNominaTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'FrmUsuario
+        'FrmUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1149, 675)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.ClientSize = New System.Drawing.Size(1023, 689)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.CheckBox6)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -460,15 +443,16 @@ Partial Class FrmUsuario
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "FrmUsuario"
+        Me.Name = "FrmUsuarios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Catalogo de Usuarios"
+        Me.Text = "Manejo de Usuarios"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmpleadosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ESNomina1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ESNomina, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ESNominaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -479,35 +463,29 @@ Partial Class FrmUsuario
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents CheckBox6 As CheckBox
     Friend WithEvents CheckBox5 As CheckBox
     Friend WithEvents CheckBox4 As CheckBox
     Friend WithEvents CheckBox3 As CheckBox
     Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents CheckBox6 As CheckBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents ESNominaBindingSource As BindingSource
+    Friend WithEvents ESNomina As ESNomina
+    Friend WithEvents EmpleadosBindingSource As BindingSource
+    Friend WithEvents EmpleadosTableAdapter As ESNominaTableAdapters.EmpleadosTableAdapter
+    Friend WithEvents TableAdapterManager As ESNominaTableAdapters.TableAdapterManager
+    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents ESNomina As ESNomina
-    Friend WithEvents EmpleadosBindingSource As BindingSource
-    Friend WithEvents EmpleadosTableAdapter As ESNominaTableAdapters.EmpleadosTableAdapter
-    Friend WithEvents TableAdapterManager As ESNominaTableAdapters.TableAdapterManager
-    Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents ESNomina1 As ESNomina
-    Friend WithEvents EmpleadosBindingSource1 As BindingSource
-    Friend WithEvents EmpleadosTableAdapter1 As ESNominaTableAdapters.EmpleadosTableAdapter
-    Friend WithEvents TableAdapterManager1 As ESNominaTableAdapters.TableAdapterManager
-    Friend WithEvents IdEmpleadosDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents UsernameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PassEmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombreEmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

@@ -41,7 +41,7 @@
     End Sub
 
     Private Sub GestionDeUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionDeUsuarioToolStripMenuItem.Click
-        Dim Usuarios As New FrmUsuario()
+        Dim Usuarios As New FrmUsuarios()
         Usuarios.MdiParent = Me
         Usuarios.Show()
     End Sub

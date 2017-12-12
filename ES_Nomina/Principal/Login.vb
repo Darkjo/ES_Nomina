@@ -87,7 +87,7 @@ Public Class Login
 
             Catch ex As Exception
 
-                MessageBox.Show("Verifique si el usuario esta Activo o consulte con el administrador del sistema.", "ESNomina", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("Falló la conexió con la base de datos, intente de nuevo.", "ESNomina", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 TextBox1.Focus()
                 Exit Sub
 

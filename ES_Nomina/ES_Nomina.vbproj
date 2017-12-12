@@ -78,6 +78,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\FrmUsuarios.Designer.vb">
+      <DependentUpon>FrmUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Datos\ESNomina.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -87,6 +93,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\FrmMarcado.Designer.vb">
+      <DependentUpon>FrmMarcado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\FrmMarcado.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Principal\FrmMenu.vb">
       <SubType>Form</SubType>
@@ -119,6 +131,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Admin\FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\FrmMarcado.resx">
+      <DependentUpon>FrmMarcado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Principal\FrmMenu.resx">
       <DependentUpon>FrmMenu.vb</DependentUpon>
     </EmbeddedResource>

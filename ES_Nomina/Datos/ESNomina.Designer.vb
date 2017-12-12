@@ -556,18 +556,8 @@ Partial Public Class ESNomina
             Me.columnUsername.AllowDBNull = false
             Me.columnUsername.Unique = true
             Me.columnUsername.MaxLength = 20
-            Me.columnPassEmpleado.AllowDBNull = false
             Me.columnPassEmpleado.MaxLength = 20
-            Me.columnNombreEmpleado.AllowDBNull = false
             Me.columnNombreEmpleado.MaxLength = 50
-            Me.columnTelefonoEmpleado.AllowDBNull = false
-            Me.columnSueldo.AllowDBNull = false
-            Me.columnEstado.AllowDBNull = false
-            Me.columnMarcado.AllowDBNull = false
-            Me.columnCatalogo.AllowDBNull = false
-            Me.columnConsulta.AllowDBNull = false
-            Me.columnReporte.AllowDBNull = false
-            Me.columnAdministrador.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -738,7 +728,11 @@ Partial Public Class ESNomina
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property PassEmpleado() As String
             Get
-                Return CType(Me(Me.tableEmpleados.PassEmpleadoColumn),String)
+                Try 
+                    Return CType(Me(Me.tableEmpleados.PassEmpleadoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PassEmpleado' de la tabla 'Empleados' es DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableEmpleados.PassEmpleadoColumn) = value
@@ -749,7 +743,11 @@ Partial Public Class ESNomina
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property NombreEmpleado() As String
             Get
-                Return CType(Me(Me.tableEmpleados.NombreEmpleadoColumn),String)
+                Try 
+                    Return CType(Me(Me.tableEmpleados.NombreEmpleadoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NombreEmpleado' de la tabla 'Empleados' es DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableEmpleados.NombreEmpleadoColumn) = value
@@ -760,7 +758,11 @@ Partial Public Class ESNomina
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property TelefonoEmpleado() As Integer
             Get
-                Return CType(Me(Me.tableEmpleados.TelefonoEmpleadoColumn),Integer)
+                Try 
+                    Return CType(Me(Me.tableEmpleados.TelefonoEmpleadoColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TelefonoEmpleado' de la tabla 'Empleados' es DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableEmpleados.TelefonoEmpleadoColumn) = value
@@ -771,7 +773,11 @@ Partial Public Class ESNomina
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property Sueldo() As Integer
             Get
-                Return CType(Me(Me.tableEmpleados.SueldoColumn),Integer)
+                Try 
+                    Return CType(Me(Me.tableEmpleados.SueldoColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Sueldo' de la tabla 'Empleados' es DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableEmpleados.SueldoColumn) = value
@@ -782,7 +788,11 @@ Partial Public Class ESNomina
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property Estado() As Boolean
             Get
-                Return CType(Me(Me.tableEmpleados.EstadoColumn),Boolean)
+                Try 
+                    Return CType(Me(Me.tableEmpleados.EstadoColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Estado' de la tabla 'Empleados' es DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableEmpleados.EstadoColumn) = value
@@ -793,7 +803,11 @@ Partial Public Class ESNomina
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property Marcado() As Boolean
             Get
-                Return CType(Me(Me.tableEmpleados.MarcadoColumn),Boolean)
+                Try 
+                    Return CType(Me(Me.tableEmpleados.MarcadoColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Marcado' de la tabla 'Empleados' es DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableEmpleados.MarcadoColumn) = value
@@ -804,7 +818,11 @@ Partial Public Class ESNomina
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property Catalogo() As Boolean
             Get
-                Return CType(Me(Me.tableEmpleados.CatalogoColumn),Boolean)
+                Try 
+                    Return CType(Me(Me.tableEmpleados.CatalogoColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Catalogo' de la tabla 'Empleados' es DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableEmpleados.CatalogoColumn) = value
@@ -815,7 +833,11 @@ Partial Public Class ESNomina
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property Consulta() As Boolean
             Get
-                Return CType(Me(Me.tableEmpleados.ConsultaColumn),Boolean)
+                Try 
+                    Return CType(Me(Me.tableEmpleados.ConsultaColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Consulta' de la tabla 'Empleados' es DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableEmpleados.ConsultaColumn) = value
@@ -826,7 +848,11 @@ Partial Public Class ESNomina
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property Reporte() As Boolean
             Get
-                Return CType(Me(Me.tableEmpleados.ReporteColumn),Boolean)
+                Try 
+                    Return CType(Me(Me.tableEmpleados.ReporteColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Reporte' de la tabla 'Empleados' es DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableEmpleados.ReporteColumn) = value
@@ -837,12 +863,136 @@ Partial Public Class ESNomina
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property Administrador() As Boolean
             Get
-                Return CType(Me(Me.tableEmpleados.AdministradorColumn),Boolean)
+                Try 
+                    Return CType(Me(Me.tableEmpleados.AdministradorColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Administrador' de la tabla 'Empleados' es DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableEmpleados.AdministradorColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsPassEmpleadoNull() As Boolean
+            Return Me.IsNull(Me.tableEmpleados.PassEmpleadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetPassEmpleadoNull()
+            Me(Me.tableEmpleados.PassEmpleadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsNombreEmpleadoNull() As Boolean
+            Return Me.IsNull(Me.tableEmpleados.NombreEmpleadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetNombreEmpleadoNull()
+            Me(Me.tableEmpleados.NombreEmpleadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsTelefonoEmpleadoNull() As Boolean
+            Return Me.IsNull(Me.tableEmpleados.TelefonoEmpleadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetTelefonoEmpleadoNull()
+            Me(Me.tableEmpleados.TelefonoEmpleadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsSueldoNull() As Boolean
+            Return Me.IsNull(Me.tableEmpleados.SueldoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetSueldoNull()
+            Me(Me.tableEmpleados.SueldoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsEstadoNull() As Boolean
+            Return Me.IsNull(Me.tableEmpleados.EstadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetEstadoNull()
+            Me(Me.tableEmpleados.EstadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsMarcadoNull() As Boolean
+            Return Me.IsNull(Me.tableEmpleados.MarcadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetMarcadoNull()
+            Me(Me.tableEmpleados.MarcadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsCatalogoNull() As Boolean
+            Return Me.IsNull(Me.tableEmpleados.CatalogoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetCatalogoNull()
+            Me(Me.tableEmpleados.CatalogoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsConsultaNull() As Boolean
+            Return Me.IsNull(Me.tableEmpleados.ConsultaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetConsultaNull()
+            Me(Me.tableEmpleados.ConsultaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsReporteNull() As Boolean
+            Return Me.IsNull(Me.tableEmpleados.ReporteColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetReporteNull()
+            Me(Me.tableEmpleados.ReporteColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsAdministradorNull() As Boolean
+            Return Me.IsNull(Me.tableEmpleados.AdministradorColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetAdministradorNull()
+            Me(Me.tableEmpleados.AdministradorColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -1055,50 +1205,66 @@ Namespace ESNominaTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(4) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(5) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT * FROM ESNomina.dbo.Empleados"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "dbo.EmpleadoCheck"
-            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.StoredProcedure
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param2", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).CommandText = "INSERT INTO [ESNomina].[dbo].[Empleados] ([Username], [PassEmpleado], [NombreEmpl"& _ 
+                "eado], [TelefonoEmpleado], [Sueldo], [Estado], [Marcado], [Catalogo], [Consulta]"& _ 
+                ", [Reporte], [Administrador]) VALUES (@Username, @PassEmpleado, @NombreEmpleado,"& _ 
+                " @TelefonoEmpleado, @Sueldo, @Estado, @Marcado, @Catalogo, @Consulta, @Reporte, "& _ 
+                "@Administrador)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Username", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "Username", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PassEmpleado", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "PassEmpleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NombreEmpleado", Global.System.Data.SqlDbType.NChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "NombreEmpleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TelefonoEmpleado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "TelefonoEmpleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sueldo", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Sueldo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Estado", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Marcado", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Marcado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Catalogo", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Catalogo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Consulta", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Consulta", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Reporte", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Reporte", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Administrador", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Administrador", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "SELECT Username AS UsernameResult, PassEmpleado AS PassResult, Estado, Marcado, C"& _ 
-                "atalogo, Consulta, Reporte, Administrador"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM     Empleados"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  (Username "& _ 
-                "= @Param1) AND (PassEmpleado = @Param2) AND (Estado = 'TRUE')"
+            Me._commandCollection(2).CommandText = "SELECT * FROM Empleados WHERE  (Username = @Username)"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "UsernameResult", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param2", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "PassResult", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Username", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "Username", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
-            Me._commandCollection(3).CommandText = "dbo.InsertarEmpleado"
-            Me._commandCollection(3).CommandType = Global.System.Data.CommandType.StoredProcedure
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Username", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PassEmpleado", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NombreEmpleado", Global.System.Data.SqlDbType.NChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TelefonoEmpleado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sueldo", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Estado", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 1, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Marcado", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 1, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Catalogo", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 1, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Consulta", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 1, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Reporte", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 1, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Administrador", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 1, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).CommandText = "SELECT Username, PassEmpleado, NombreEmpleado, TelefonoEmpleado, Sueldo, Estado, "& _ 
+                "Marcado, Catalogo, Consulta, Reporte, Administrador"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM     Empleados"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  "& _ 
+                "(Username = @Username) AND (PassEmpleado = @PassEmpleado) AND (Estado = 'True')"
+            Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Username", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "Username", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PassEmpleado", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "PassEmpleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(4).Connection = Me.Connection
-            Me._commandCollection(4).CommandText = "SELECT Username AS UsernameResult, PassEmpleado AS PassResult, Estado, Marcado, C"& _ 
-                "atalogo, Consulta, Reporte, Administrador"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM     Empleados"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  (Username "& _ 
-                "= @Param1) AND (PassEmpleado = @Param2) AND (Estado = 'TRUE')"
+            Me._commandCollection(4).CommandText = "UPDATE Empleados "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET  PassEmpleado = @PassEmpleado, NombreEmpleado = @NombreEmp"& _ 
+                "leado, TelefonoEmpleado = @TelefonoEmpleado, Sueldo = @Sueldo, Estado = @Estado,"& _ 
+                " Marcado = @Marcado, Catalogo = @Catalogo, Consulta = @Consulta, Reporte = @Repo"& _ 
+                "rte, Administrador = @Administrador"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  (Username = @Username)"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "UsernameResult", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param2", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "PassResult", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PassEmpleado", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "PassEmpleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NombreEmpleado", Global.System.Data.SqlDbType.NChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "NombreEmpleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TelefonoEmpleado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "TelefonoEmpleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sueldo", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Sueldo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Estado", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Marcado", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Marcado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Catalogo", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Catalogo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Consulta", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Consulta", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Reporte", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Reporte", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Administrador", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Administrador", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Username", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "Username", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(5).Connection = Me.Connection
+            Me._commandCollection(5).CommandText = "DELETE FROM Empleados"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  (Username = @Username)"
+            Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Username", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "Username", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1129,17 +1295,12 @@ Namespace ESNominaTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillBy(ByVal dataTable As ESNomina.EmpleadosDataTable, ByVal Param1 As String, ByVal Param2 As String) As Integer
+        Public Overloads Overridable Function ConsultaExistencia(ByVal dataTable As ESNomina.EmpleadosDataTable, ByVal Username As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(2)
-            If (Param1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param1")
+            If (Username Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
-            End If
-            If (Param2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param2")
-            Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Param2,String)
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Username,String)
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -1152,17 +1313,56 @@ Namespace ESNominaTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function LoginEmpleados(ByVal Param1 As String, ByVal Param2 As String) As ESNomina.EmpleadosDataTable
+        Public Overloads Overridable Function GetDataBy(ByVal Username As String) As ESNomina.EmpleadosDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(2)
-            If (Param1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param1")
+            If (Username Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Username,String)
             End If
-            If (Param2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param2")
+            Dim dataTable As ESNomina.EmpleadosDataTable = New ESNomina.EmpleadosDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function ConsultaUsuario(ByVal dataTable As ESNomina.EmpleadosDataTable, ByVal Username As String, ByVal PassEmpleado As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
+            If (Username Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Param2,String)
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Username,String)
+            End If
+            If (PassEmpleado Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(PassEmpleado,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy1(ByVal Username As String, ByVal PassEmpleado As String) As ESNomina.EmpleadosDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
+            If (Username Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Username,String)
+            End If
+            If (PassEmpleado Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(PassEmpleado,String)
             End If
             Dim dataTable As ESNomina.EmpleadosDataTable = New ESNomina.EmpleadosDataTable()
             Me.Adapter.Fill(dataTable)
@@ -1201,30 +1401,62 @@ Namespace ESNominaTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal Username As String, ByVal PassEmpleado As String, ByVal NombreEmpleado As String, ByVal TelefonoEmpleado As Integer, ByVal Sueldo As Integer, ByVal Estado As Boolean, ByVal Marcado As Boolean, ByVal Catalogo As Boolean, ByVal Consulta As Boolean, ByVal Reporte As Boolean, ByVal Administrador As Boolean) As Integer
+        Public Overloads Overridable Function Insert(ByVal Username As String, ByVal PassEmpleado As String, ByVal NombreEmpleado As String, ByVal TelefonoEmpleado As Global.System.Nullable(Of Integer), ByVal Sueldo As Global.System.Nullable(Of Integer), ByVal Estado As Global.System.Nullable(Of Boolean), ByVal Marcado As Global.System.Nullable(Of Boolean), ByVal Catalogo As Global.System.Nullable(Of Boolean), ByVal Consulta As Global.System.Nullable(Of Boolean), ByVal Reporte As Global.System.Nullable(Of Boolean), ByVal Administrador As Global.System.Nullable(Of Boolean)) As Integer
             If (Username Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Username")
+                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(Username,String)
             End If
             If (PassEmpleado Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("PassEmpleado")
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.InsertCommand.Parameters(1).Value = CType(PassEmpleado,String)
             End If
             If (NombreEmpleado Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("NombreEmpleado")
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.InsertCommand.Parameters(2).Value = CType(NombreEmpleado,String)
             End If
-            Me.Adapter.InsertCommand.Parameters(3).Value = CType(TelefonoEmpleado,Integer)
-            Me.Adapter.InsertCommand.Parameters(4).Value = CType(Sueldo,Integer)
-            Me.Adapter.InsertCommand.Parameters(5).Value = CType(Estado,Boolean)
-            Me.Adapter.InsertCommand.Parameters(6).Value = CType(Marcado,Boolean)
-            Me.Adapter.InsertCommand.Parameters(7).Value = CType(Catalogo,Boolean)
-            Me.Adapter.InsertCommand.Parameters(8).Value = CType(Consulta,Boolean)
-            Me.Adapter.InsertCommand.Parameters(9).Value = CType(Reporte,Boolean)
-            Me.Adapter.InsertCommand.Parameters(10).Value = CType(Administrador,Boolean)
+            If (TelefonoEmpleado.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(TelefonoEmpleado.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (Sueldo.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(Sueldo.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (Estado.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Estado.Value,Boolean)
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (Marcado.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(Marcado.Value,Boolean)
+            Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (Catalogo.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(Catalogo.Value,Boolean)
+            Else
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (Consulta.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(Consulta.Value,Boolean)
+            Else
+                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (Reporte.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(9).Value = CType(Reporte.Value,Boolean)
+            Else
+                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
+            If (Administrador.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(10).Value = CType(Administrador.Value,Boolean)
+            Else
+                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -1242,100 +1474,64 @@ Namespace ESNominaTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function EmpleadoCheck(ByVal Param1 As String, ByVal Param2 As String) As Object
-            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
-            If (Param1 Is Nothing) Then
-                command.Parameters(1).Value = Global.System.DBNull.Value
-            Else
-                command.Parameters(1).Value = CType(Param1,String)
-            End If
-            If (Param2 Is Nothing) Then
-                command.Parameters(2).Value = Global.System.DBNull.Value
-            Else
-                command.Parameters(2).Value = CType(Param2,String)
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
-            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                command.Connection.Open
-            End If
-            Dim returnValue As Object
-            Try 
-                returnValue = command.ExecuteScalar
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    command.Connection.Close
-                End If
-            End Try
-            If ((returnValue Is Nothing)  _
-                        OrElse (returnValue.GetType Is GetType(Global.System.DBNull))) Then
-                Return Nothing
-            Else
-                Return CType(returnValue,Object)
-            End If
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
-        Public Overloads Overridable Function InsertarEmpleado(ByVal Username As String, ByVal PassEmpleado As String, ByVal NombreEmpleado As String, ByVal TelefonoEmpleado As Global.System.Nullable(Of Integer), ByVal Sueldo As Global.System.Nullable(Of Integer), ByVal Estado As Global.System.Nullable(Of Boolean), ByVal Marcado As Global.System.Nullable(Of Boolean), ByVal Catalogo As Global.System.Nullable(Of Boolean), ByVal Consulta As Global.System.Nullable(Of Boolean), ByVal Reporte As Global.System.Nullable(Of Boolean), ByVal Administrador As Global.System.Nullable(Of Boolean)) As Integer
-            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(3)
+        Public Overloads Overridable Function AGREGAR(ByVal Username As String, ByVal PassEmpleado As String, ByVal NombreEmpleado As String, ByVal TelefonoEmpleado As Global.System.Nullable(Of Integer), ByVal Sueldo As Global.System.Nullable(Of Integer), ByVal Estado As Global.System.Nullable(Of Boolean), ByVal Marcado As Global.System.Nullable(Of Boolean), ByVal Catalogo As Global.System.Nullable(Of Boolean), ByVal Consulta As Global.System.Nullable(Of Boolean), ByVal Reporte As Global.System.Nullable(Of Boolean), ByVal Administrador As Global.System.Nullable(Of Boolean)) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
             If (Username Is Nothing) Then
-                command.Parameters(1).Value = Global.System.DBNull.Value
+                command.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(1).Value = CType(Username,String)
+                command.Parameters(0).Value = CType(Username,String)
             End If
             If (PassEmpleado Is Nothing) Then
-                command.Parameters(2).Value = Global.System.DBNull.Value
+                command.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(2).Value = CType(PassEmpleado,String)
+                command.Parameters(1).Value = CType(PassEmpleado,String)
             End If
             If (NombreEmpleado Is Nothing) Then
-                command.Parameters(3).Value = Global.System.DBNull.Value
+                command.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(3).Value = CType(NombreEmpleado,String)
+                command.Parameters(2).Value = CType(NombreEmpleado,String)
             End If
             If (TelefonoEmpleado.HasValue = true) Then
-                command.Parameters(4).Value = CType(TelefonoEmpleado.Value,Integer)
+                command.Parameters(3).Value = CType(TelefonoEmpleado.Value,Integer)
+            Else
+                command.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (Sueldo.HasValue = true) Then
+                command.Parameters(4).Value = CType(Sueldo.Value,Integer)
             Else
                 command.Parameters(4).Value = Global.System.DBNull.Value
             End If
-            If (Sueldo.HasValue = true) Then
-                command.Parameters(5).Value = CType(Sueldo.Value,Integer)
+            If (Estado.HasValue = true) Then
+                command.Parameters(5).Value = CType(Estado.Value,Boolean)
             Else
                 command.Parameters(5).Value = Global.System.DBNull.Value
             End If
-            If (Estado.HasValue = true) Then
-                command.Parameters(6).Value = CType(Estado.Value,Boolean)
+            If (Marcado.HasValue = true) Then
+                command.Parameters(6).Value = CType(Marcado.Value,Boolean)
             Else
                 command.Parameters(6).Value = Global.System.DBNull.Value
             End If
-            If (Marcado.HasValue = true) Then
-                command.Parameters(7).Value = CType(Marcado.Value,Boolean)
+            If (Catalogo.HasValue = true) Then
+                command.Parameters(7).Value = CType(Catalogo.Value,Boolean)
             Else
                 command.Parameters(7).Value = Global.System.DBNull.Value
             End If
-            If (Catalogo.HasValue = true) Then
-                command.Parameters(8).Value = CType(Catalogo.Value,Boolean)
+            If (Consulta.HasValue = true) Then
+                command.Parameters(8).Value = CType(Consulta.Value,Boolean)
             Else
                 command.Parameters(8).Value = Global.System.DBNull.Value
             End If
-            If (Consulta.HasValue = true) Then
-                command.Parameters(9).Value = CType(Consulta.Value,Boolean)
+            If (Reporte.HasValue = true) Then
+                command.Parameters(9).Value = CType(Reporte.Value,Boolean)
             Else
                 command.Parameters(9).Value = Global.System.DBNull.Value
             End If
-            If (Reporte.HasValue = true) Then
-                command.Parameters(10).Value = CType(Reporte.Value,Boolean)
+            If (Administrador.HasValue = true) Then
+                command.Parameters(10).Value = CType(Administrador.Value,Boolean)
             Else
                 command.Parameters(10).Value = Global.System.DBNull.Value
-            End If
-            If (Administrador.HasValue = true) Then
-                command.Parameters(11).Value = CType(Administrador.Value,Boolean)
-            Else
-                command.Parameters(11).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -1355,38 +1551,106 @@ Namespace ESNominaTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function LoginEmp(ByVal Param1 As String, ByVal Param2 As String) As String
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
+        Public Overloads Overridable Function EDITAR(ByVal PassEmpleado As String, ByVal NombreEmpleado As String, ByVal TelefonoEmpleado As Global.System.Nullable(Of Integer), ByVal Sueldo As Global.System.Nullable(Of Integer), ByVal Estado As Global.System.Nullable(Of Boolean), ByVal Marcado As Global.System.Nullable(Of Boolean), ByVal Catalogo As Global.System.Nullable(Of Boolean), ByVal Consulta As Global.System.Nullable(Of Boolean), ByVal Reporte As Global.System.Nullable(Of Boolean), ByVal Administrador As Global.System.Nullable(Of Boolean), ByVal Username As String) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(4)
-            If (Param1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param1")
+            If (PassEmpleado Is Nothing) Then
+                command.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(0).Value = CType(Param1,String)
+                command.Parameters(0).Value = CType(PassEmpleado,String)
             End If
-            If (Param2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param2")
+            If (NombreEmpleado Is Nothing) Then
+                command.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(1).Value = CType(Param2,String)
+                command.Parameters(1).Value = CType(NombreEmpleado,String)
+            End If
+            If (TelefonoEmpleado.HasValue = true) Then
+                command.Parameters(2).Value = CType(TelefonoEmpleado.Value,Integer)
+            Else
+                command.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (Sueldo.HasValue = true) Then
+                command.Parameters(3).Value = CType(Sueldo.Value,Integer)
+            Else
+                command.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (Estado.HasValue = true) Then
+                command.Parameters(4).Value = CType(Estado.Value,Boolean)
+            Else
+                command.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (Marcado.HasValue = true) Then
+                command.Parameters(5).Value = CType(Marcado.Value,Boolean)
+            Else
+                command.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (Catalogo.HasValue = true) Then
+                command.Parameters(6).Value = CType(Catalogo.Value,Boolean)
+            Else
+                command.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (Consulta.HasValue = true) Then
+                command.Parameters(7).Value = CType(Consulta.Value,Boolean)
+            Else
+                command.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (Reporte.HasValue = true) Then
+                command.Parameters(8).Value = CType(Reporte.Value,Boolean)
+            Else
+                command.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (Administrador.HasValue = true) Then
+                command.Parameters(9).Value = CType(Administrador.Value,Boolean)
+            Else
+                command.Parameters(9).Value = Global.System.DBNull.Value
+            End If
+            If (Username Is Nothing) Then
+                command.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(10).Value = CType(Username,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
                 command.Connection.Open
             End If
-            Dim returnValue As Object
+            Dim returnValue As Integer
             Try 
-                returnValue = command.ExecuteScalar
+                returnValue = command.ExecuteNonQuery
             Finally
                 If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
                     command.Connection.Close
                 End If
             End Try
-            If ((returnValue Is Nothing)  _
-                        OrElse (returnValue.GetType Is GetType(Global.System.DBNull))) Then
-                Return Nothing
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, false)>  _
+        Public Overloads Overridable Function ELIMINAR(ByVal Username As String) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(5)
+            If (Username Is Nothing) Then
+                command.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                Return CType(returnValue,String)
+                command.Parameters(0).Value = CType(Username,String)
             End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
         End Function
     End Class
     
