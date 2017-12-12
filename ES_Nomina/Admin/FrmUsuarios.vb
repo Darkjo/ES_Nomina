@@ -132,4 +132,16 @@ Public Class FrmUsuarios
         LIMPIAR()
     End Sub
 
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        'VALIDAR CAJA DE TEXTO VACIA
+        If String.IsNullOrEmpty(TextBox1.Text) Then
+            TextBox1.Focus()
+            TextBox1.BackColor = Color.Yellow
+            Exit Sub
+        End If
+
+        Me.EmpleadosTableAdapter.NuevaPass(TextBox1.Text)
+        MessageBox.Show("Se ha reseteado la contraseña correctamente", "ES_Nomina", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        LIMPIAR()
+    End Sub
 End Class

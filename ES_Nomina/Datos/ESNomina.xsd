@@ -51,7 +51,7 @@
               <Mapping SourceColumn="Administrador" DataSetColumn="Administrador" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="ESNominaConnection (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AGREGAR" Modifier="Public" Name="AGREGAR" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="AGREGAR">
+              <DbSource ConnectionRef="ESNominaConnection (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AGREGAR" Modifier="Public" Name="AGREGAR" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AGREGAR">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [ESNomina].[dbo].[Empleados] ([Username], [PassEmpleado], [NombreEmpleado], [TelefonoEmpleado], [Sueldo], [Estado], [Marcado], [Catalogo], [Consulta], [Reporte], [Administrador]) VALUES (@Username, @PassEmpleado, @NombreEmpleado, @TelefonoEmpleado, @Sueldo, @Estado, @Marcado, @Catalogo, @Consulta, @Reporte, @Administrador)</CommandText>
@@ -71,7 +71,7 @@
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="ESNominaConnection (MySettings)" DbObjectName="ESNomina.dbo.Empleados" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="ConsultaExistencia" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="ConsultaExistencia" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ConsultaExistencia">
+              <DbSource ConnectionRef="ESNominaConnection (MySettings)" DbObjectName="ESNomina.dbo.Empleados" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="ConsultaExistencia" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="ConsultaExistencia" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ConsultaExistencia">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT * FROM Empleados WHERE  (Username = @Username)</CommandText>
@@ -81,7 +81,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="ESNominaConnection (MySettings)" DbObjectName="ESNomina.dbo.Empleados" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="ConsultaUsuario" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="ConsultaUsuario" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ConsultaUsuario">
+              <DbSource ConnectionRef="ESNominaConnection (MySettings)" DbObjectName="ESNomina.dbo.Empleados" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="ConsultaUsuario" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy11" GeneratorSourceName="ConsultaUsuario" GetMethodModifier="Public" GetMethodName="GetDataBy11" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy11" UserSourceName="ConsultaUsuario">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT Username, PassEmpleado, NombreEmpleado, TelefonoEmpleado, Sueldo, Estado, Marcado, Catalogo, Consulta, Reporte, Administrador
@@ -94,7 +94,7 @@ WHERE  (Username = @Username) AND (PassEmpleado = @PassEmpleado) AND (Estado = '
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="ESNominaConnection (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="EDITAR" Modifier="Public" Name="EDITAR" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="EDITAR">
+              <DbSource ConnectionRef="ESNominaConnection (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="EDITAR" Modifier="Public" Name="EDITAR" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="EDITAR">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE Empleados 
@@ -116,7 +116,7 @@ WHERE  (Username = @Username)</CommandText>
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="ESNominaConnection (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ELIMINAR" Modifier="Public" Name="ELIMINAR" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="ELIMINAR">
+              <DbSource ConnectionRef="ESNominaConnection (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ELIMINAR" Modifier="Public" Name="ELIMINAR" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="ELIMINAR">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM Empleados
@@ -126,6 +126,18 @@ WHERE  (Username = @Username)</CommandText>
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ESNominaConnection (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="NuevaPass" Modifier="Public" Name="NuevaPass" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="NuevaPass">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE Empleados
+SET  PassEmpleado = '1234'
+WHERE  (Username = @Username)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Username" ColumnName="Username" DataSourceName="ESNomina.dbo.Empleados" DataTypeServer="nchar(20)" DbType="String" Direction="Input" ParameterName="@Username" Precision="0" ProviderType="NChar" Scale="0" Size="20" SourceColumn="Username" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
               </DbSource>
             </Sources>
           </TableAdapter>
@@ -137,11 +149,11 @@ WHERE  (Username = @Username)</CommandText>
   <xs:element name="ESNomina" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ESNomina" msprop:Generator_UserDSName="ESNomina">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Empleados" msprop:Generator_TableClassName="EmpleadosDataTable" msprop:Generator_TableVarName="tableEmpleados" msprop:Generator_RowChangedName="EmpleadosRowChanged" msprop:Generator_TablePropName="Empleados" msprop:Generator_RowDeletingName="EmpleadosRowDeleting" msprop:Generator_RowChangingName="EmpleadosRowChanging" msprop:Generator_RowEvHandlerName="EmpleadosRowChangeEventHandler" msprop:Generator_RowDeletedName="EmpleadosRowDeleted" msprop:Generator_RowClassName="EmpleadosRow" msprop:Generator_UserTableName="Empleados" msprop:Generator_RowEvArgName="EmpleadosRowChangeEvent">
+        <xs:element name="Empleados" msprop:Generator_TableClassName="EmpleadosDataTable" msprop:Generator_TableVarName="tableEmpleados" msprop:Generator_TablePropName="Empleados" msprop:Generator_RowDeletingName="EmpleadosRowDeleting" msprop:Generator_RowChangingName="EmpleadosRowChanging" msprop:Generator_RowEvHandlerName="EmpleadosRowChangeEventHandler" msprop:Generator_RowDeletedName="EmpleadosRowDeleted" msprop:Generator_UserTableName="Empleados" msprop:Generator_RowChangedName="EmpleadosRowChanged" msprop:Generator_RowEvArgName="EmpleadosRowChangeEvent" msprop:Generator_RowClassName="EmpleadosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idEmpleados" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidEmpleados" msprop:Generator_ColumnPropNameInRow="idEmpleados" msprop:Generator_ColumnPropNameInTable="idEmpleadosColumn" msprop:Generator_UserColumnName="idEmpleados" type="xs:int" />
-              <xs:element name="Username" msprop:Generator_ColumnVarNameInTable="columnUsername" msprop:Generator_ColumnPropNameInRow="Username" msprop:Generator_ColumnPropNameInTable="UsernameColumn" msprop:Generator_UserColumnName="Username" minOccurs="0">
+              <xs:element name="Username" msprop:Generator_ColumnVarNameInTable="columnUsername" msprop:Generator_ColumnPropNameInRow="Username" msprop:Generator_ColumnPropNameInTable="UsernameColumn" msprop:Generator_UserColumnName="Username">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
