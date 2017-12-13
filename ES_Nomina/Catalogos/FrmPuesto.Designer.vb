@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmPuesto
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmPuesto
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPuesto))
@@ -32,7 +32,6 @@ Partial Class FrmPuesto
         Me.PuestoTableAdapter = New ES_Nomina.ESNominaTableAdapters.PuestoTableAdapter()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.NombrePuestoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.ESNomina, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PuestoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -96,24 +95,13 @@ Partial Class FrmPuesto
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NombrePuestoDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.PuestoBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(34, 200)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.Size = New System.Drawing.Size(330, 150)
         Me.DataGridView1.TabIndex = 5
-        '
-        'NombrePuestoDataGridViewTextBoxColumn
-        '
-        Me.NombrePuestoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.NombrePuestoDataGridViewTextBoxColumn.DataPropertyName = "NombrePuesto"
-        Me.NombrePuestoDataGridViewTextBoxColumn.HeaderText = "Puesto"
-        Me.NombrePuestoDataGridViewTextBoxColumn.Name = "NombrePuestoDataGridViewTextBoxColumn"
-        Me.NombrePuestoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'FrmPuesto
         '
@@ -147,5 +135,4 @@ Partial Class FrmPuesto
     Friend WithEvents PuestoTableAdapter As ESNominaTableAdapters.PuestoTableAdapter
     Friend WithEvents Button1 As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents NombrePuestoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
