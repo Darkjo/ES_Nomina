@@ -43,6 +43,7 @@ Partial Class FrmMenu
         Me.RespaldoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.cerrarSesion = New System.Windows.Forms.ToolStripMenuItem()
         Me.opcionSalir = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -135,6 +136,7 @@ Partial Class FrmMenu
         '
         'menuReportes
         '
+        Me.menuReportes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpleadosToolStripMenuItem})
         Me.menuReportes.Enabled = False
         Me.menuReportes.Image = CType(resources.GetObject("menuReportes.Image"), System.Drawing.Image)
         Me.menuReportes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
@@ -191,6 +193,12 @@ Partial Class FrmMenu
         Me.opcionSalir.Text = "Salir"
         Me.opcionSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
+        'EmpleadosToolStripMenuItem
+        '
+        Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.EmpleadosToolStripMenuItem.Text = "Empleados"
+        '
         'FrmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -232,4 +240,5 @@ Partial Class FrmMenu
     Friend WithEvents opcionSalir As ToolStripMenuItem
     Friend WithEvents DepartamentoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PuestoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EmpleadosToolStripMenuItem As ToolStripMenuItem
 End Class
