@@ -148,7 +148,7 @@ Partial Class FrmMenu
         'EmpleadosToolStripMenuItem
         '
         Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(158, 26)
         Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
         'menuAdmin

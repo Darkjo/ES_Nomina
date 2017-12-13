@@ -75,4 +75,10 @@
         Puesto.MdiParent = Me
         Puesto.Show()
     End Sub
+
+    Private Sub menuConsultas_Click(sender As Object, e As EventArgs) Handles menuConsultas.Click
+        Dim Consult As New Consutlas()
+        Consult.MdiParent = Me
+        Consult.Show()
+    End Sub
 End Class

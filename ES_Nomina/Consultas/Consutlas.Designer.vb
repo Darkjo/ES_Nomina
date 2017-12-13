@@ -23,6 +23,7 @@ Partial Class Consutlas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Consutlas))
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
@@ -34,10 +35,10 @@ Partial Class Consutlas
         Me.DepartamentoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DepartamentoTableAdapter = New ES_Nomina.ESNominaTableAdapters.DepartamentoTableAdapter()
         Me.TableAdapterManager = New ES_Nomina.ESNominaTableAdapters.TableAdapterManager()
-        Me.EmpleadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmpleadosTableAdapter = New ES_Nomina.ESNominaTableAdapters.EmpleadosTableAdapter()
-        Me.PuestoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PuestoTableAdapter = New ES_Nomina.ESNominaTableAdapters.PuestoTableAdapter()
+        Me.EmpleadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PuestoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MarcadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MarcadoTableAdapter = New ES_Nomina.ESNominaTableAdapters.MarcadoTableAdapter()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,9 +53,10 @@ Partial Class Consutlas
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(12, 87)
+        Me.RadioButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton1.Location = New System.Drawing.Point(44, 83)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(99, 21)
+        Me.RadioButton1.Size = New System.Drawing.Size(131, 29)
         Me.RadioButton1.TabIndex = 0
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "Empleados"
@@ -63,9 +65,10 @@ Partial Class Consutlas
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(117, 87)
+        Me.RadioButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton2.Location = New System.Drawing.Point(181, 83)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(119, 21)
+        Me.RadioButton2.Size = New System.Drawing.Size(156, 29)
         Me.RadioButton2.TabIndex = 1
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "Departamento"
@@ -74,9 +77,10 @@ Partial Class Consutlas
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(242, 87)
+        Me.RadioButton3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton3.Location = New System.Drawing.Point(343, 83)
         Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(73, 21)
+        Me.RadioButton3.Size = New System.Drawing.Size(94, 29)
         Me.RadioButton3.TabIndex = 2
         Me.RadioButton3.TabStop = True
         Me.RadioButton3.Text = "Puesto"
@@ -84,18 +88,19 @@ Partial Class Consutlas
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 26)
-        Me.TextBox1.Multiline = True
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(37, 28)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(357, 42)
+        Me.TextBox1.Size = New System.Drawing.Size(357, 34)
         Me.TextBox1.TabIndex = 3
         '
         'RadioButton4
         '
         Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(321, 87)
+        Me.RadioButton4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton4.Location = New System.Drawing.Point(443, 83)
         Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(84, 21)
+        Me.RadioButton4.Size = New System.Drawing.Size(110, 29)
         Me.RadioButton4.TabIndex = 5
         Me.RadioButton4.TabStop = True
         Me.RadioButton4.Text = "Marcado"
@@ -106,11 +111,11 @@ Partial Class Consutlas
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(-4, 131)
+        Me.DataGridView1.Location = New System.Drawing.Point(37, 124)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(1066, 490)
+        Me.DataGridView1.Size = New System.Drawing.Size(965, 414)
         Me.DataGridView1.TabIndex = 6
         '
         'ESNominaBindingSource
@@ -140,23 +145,23 @@ Partial Class Consutlas
         Me.TableAdapterManager.PuestoTableAdapter = Me.PuestoTableAdapter
         Me.TableAdapterManager.UpdateOrder = ES_Nomina.ESNominaTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'EmpleadosTableAdapter
+        '
+        Me.EmpleadosTableAdapter.ClearBeforeFill = True
+        '
+        'PuestoTableAdapter
+        '
+        Me.PuestoTableAdapter.ClearBeforeFill = True
+        '
         'EmpleadosBindingSource
         '
         Me.EmpleadosBindingSource.DataMember = "Empleados"
         Me.EmpleadosBindingSource.DataSource = Me.ESNomina
         '
-        'EmpleadosTableAdapter
-        '
-        Me.EmpleadosTableAdapter.ClearBeforeFill = True
-        '
         'PuestoBindingSource
         '
         Me.PuestoBindingSource.DataMember = "Puesto"
         Me.PuestoBindingSource.DataSource = Me.ESNomina
-        '
-        'PuestoTableAdapter
-        '
-        Me.PuestoTableAdapter.ClearBeforeFill = True
         '
         'MarcadoBindingSource
         '
@@ -171,14 +176,18 @@ Partial Class Consutlas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1059, 617)
+        Me.ClientSize = New System.Drawing.Size(1059, 553)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.RadioButton4)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.RadioButton3)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Consutlas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Consultas"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ESNominaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
