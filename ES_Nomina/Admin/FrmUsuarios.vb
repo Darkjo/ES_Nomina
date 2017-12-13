@@ -4,13 +4,26 @@ Public Class FrmUsuarios
 
     Dim CONN As New SqlConnection(My.Settings.ESNominaConnection)
 
+    Private Sub EmpleadosBindingNavigatorSaveItem_Click(sender As System.Object, e As System.EventArgs)
+        Me.Validate()
+        Me.EmpleadosBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.ESNomina)
+
+    End Sub
+
     Private Sub FrmUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'ESNominaDataSet.Puesto' Puede moverla o quitarla según sea necesario.
+        Me.PuestoTableAdapter.Fill(Me.ESNominaDataSet.Puesto)
+        'TODO: esta línea de código carga datos en la tabla 'ESNominaDataSet.Departamento' Puede moverla o quitarla según sea necesario.
+        Me.DepartamentoTableAdapter.Fill(Me.ESNominaDataSet.Departamento)
         'TODO: esta línea de código carga datos en la tabla 'ESNomina.Empleados' Puede moverla o quitarla según sea necesario.
         Me.EmpleadosTableAdapter.Fill(Me.ESNomina.Empleados)
+        DATAREFRESH()
+
     End Sub
 
     Private Sub LIMPIAR()
-        'DATAREFRESH()
+        DATAREFRESH()
         TextBox1.Clear()
         TextBox2.Clear()
         TextBox3.Clear()
@@ -41,6 +54,8 @@ Public Class FrmUsuarios
         CheckBox4.Checked = DataGridView1.Rows(e.RowIndex).Cells(8).Value()
         CheckBox5.Checked = DataGridView1.Rows(e.RowIndex).Cells(9).Value()
         CheckBox6.Checked = DataGridView1.Rows(e.RowIndex).Cells(10).Value()
+        ComboBox1.SelectedText = DataGridView1.Rows(e.RowIndex).Cells(11).Value()
+        ComboBox2.SelectedText = DataGridView1.Rows(e.RowIndex).Cells(12).Value()
     End Sub
 
     Private Sub DataGridView1_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellEnter
@@ -55,6 +70,8 @@ Public Class FrmUsuarios
         CheckBox4.Checked = DataGridView1.Rows(e.RowIndex).Cells(8).Value()
         CheckBox5.Checked = DataGridView1.Rows(e.RowIndex).Cells(9).Value()
         CheckBox6.Checked = DataGridView1.Rows(e.RowIndex).Cells(10).Value()
+        ComboBox1.SelectedText = DataGridView1.Rows(e.RowIndex).Cells(11).Value()
+        ComboBox2.SelectedText = DataGridView1.Rows(e.RowIndex).Cells(12).Value()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -98,25 +115,16 @@ Public Class FrmUsuarios
         Me.EmpleadosTableAdapter.ConsultaExistencia(ESNomina.Empleados, TextBox1.Text)
         'Si(existe)
         If ESNomina.Empleados.Count() = 0 Then
-            Me.EmpleadosTableAdapter.AGREGAR(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, CheckBox1.Checked, CheckBox2.Checked, CheckBox3.Checked, CheckBox4.Checked, CheckBox5.Checked, CheckBox6.Checked)
+            Me.EmpleadosTableAdapter.AGREGAR(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, CheckBox1.Checked, CheckBox2.Checked, CheckBox3.Checked, CheckBox4.Checked, CheckBox5.Checked, CheckBox6.Checked, ComboBox1.SelectedValue, ComboBox2.SelectedValue)
         Else
             Me.EmpleadosTableAdapter.EDITAR(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, CheckBox1.Checked, CheckBox2.Checked, CheckBox3.Checked, CheckBox4.Checked, CheckBox5.Checked, CheckBox6.Checked)
         End If
 
 
-        MessageBox.Show("Datos guardados correctamente.", "Biblioteca Online", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        MessageBox.Show("Datos guardados correctamente.", "ES_Nomina", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         LIMPIAR()
 
-    End Sub
 
-    Private Sub DATAREFRESH()
-        Dim DS As New DataSet()
-        Dim DA As New SqlDataAdapter("SELECT Username AS Usuario, PassEmpleado AS Contraseña, NombreEmpleado AS Nombre, TelefonoEmpleado AS Telefono, Sueldo AS Sueldo, Estado AS Estado, Marcado AS Marcado, Catalogo AS Catálogo, Consulta AS Consulta, Reporte AS Reporte, Administrador AS Administración FROM Empleados", CONN)
-        DA.Fill(DS)
-        DataGridView1.DataSource = DS.Tables(0)
-        DataGridView1.DefaultCellStyle.BackColor = Color.White
-        DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.DarkBlue
-        DataGridView1.AutoResizeColumns()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -144,4 +152,20 @@ Public Class FrmUsuarios
         MessageBox.Show("Se ha reseteado la contraseña correctamente", "ES_Nomina", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         LIMPIAR()
     End Sub
+
+    Private Sub DATAREFRESH()
+        Dim DS As New DataSet()
+        Dim DA As New SqlDataAdapter("SELECT Username AS Usuario, PassEmpleado AS Clave, NombreEmpleado AS Nombre,
+        TelefonoEmpleado AS Telefono, Sueldo, Estado, Marcado, Catalogo, Consulta, Reporte, Administrador,
+        Departamento.nombreDepartamento AS Departamento, Puesto.NombrePuesto AS Puesto
+        FROM ((Empleados
+        INNER JOIN Departamento ON Empleados.idDepartamento = Departamento.idDepartamento)
+        INNER JOIN Puesto ON Empleados.idPuesto = Puesto.idPuesto);", CONN)
+        DA.Fill(DS)
+        DataGridView1.DataSource = DS.Tables(0)
+        DataGridView1.DefaultCellStyle.BackColor = Color.White
+        DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige
+        DataGridView1.AutoResizeColumns()
+    End Sub
+
 End Class

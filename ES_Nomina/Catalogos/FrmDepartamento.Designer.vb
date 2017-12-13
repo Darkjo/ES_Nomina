@@ -29,7 +29,6 @@ Partial Class FrmDepartamento
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.IdDepartamentoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDepartamentoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DepartamentoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ESNomina = New ES_Nomina.ESNomina()
@@ -46,18 +45,18 @@ Partial Class FrmDepartamento
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(23, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(219, 36)
+        Me.Label1.Size = New System.Drawing.Size(296, 36)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Añadir Puestos"
+        Me.Label1.Text = "Añadir Departamento"
         '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(105, 140)
+        Me.Button1.Location = New System.Drawing.Point(165, 132)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(113, 33)
+        Me.Button1.Size = New System.Drawing.Size(113, 36)
         Me.Button1.TabIndex = 7
         Me.Button1.Text = "Guardar"
         Me.Button1.UseVisualStyleBackColor = False
@@ -65,20 +64,20 @@ Partial Class FrmDepartamento
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(105, 90)
+        Me.TextBox1.Location = New System.Drawing.Point(165, 86)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(255, 28)
+        Me.TextBox1.Size = New System.Drawing.Size(234, 28)
         Me.TextBox1.TabIndex = 6
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(26, 94)
+        Me.Label2.Location = New System.Drawing.Point(26, 90)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(73, 24)
+        Me.Label2.Size = New System.Drawing.Size(133, 24)
         Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Puesto:"
+        Me.Label2.Text = "Departamento:"
         '
         'DataGridView1
         '
@@ -86,26 +85,20 @@ Partial Class FrmDepartamento
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDepartamentoDataGridViewTextBoxColumn, Me.NombreDepartamentoDataGridViewTextBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NombreDepartamentoDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.DepartamentoBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(29, 201)
+        Me.DataGridView1.Location = New System.Drawing.Point(29, 197)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(331, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(370, 150)
         Me.DataGridView1.TabIndex = 8
-        '
-        'IdDepartamentoDataGridViewTextBoxColumn
-        '
-        Me.IdDepartamentoDataGridViewTextBoxColumn.DataPropertyName = "idDepartamento"
-        Me.IdDepartamentoDataGridViewTextBoxColumn.HeaderText = "idDepartamento"
-        Me.IdDepartamentoDataGridViewTextBoxColumn.Name = "IdDepartamentoDataGridViewTextBoxColumn"
-        Me.IdDepartamentoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'NombreDepartamentoDataGridViewTextBoxColumn
         '
+        Me.NombreDepartamentoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.NombreDepartamentoDataGridViewTextBoxColumn.DataPropertyName = "NombreDepartamento"
-        Me.NombreDepartamentoDataGridViewTextBoxColumn.HeaderText = "NombreDepartamento"
+        Me.NombreDepartamentoDataGridViewTextBoxColumn.HeaderText = "Departamento"
         Me.NombreDepartamentoDataGridViewTextBoxColumn.Name = "NombreDepartamentoDataGridViewTextBoxColumn"
         Me.NombreDepartamentoDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -126,7 +119,8 @@ Partial Class FrmDepartamento
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.DepartamentoTableAdapter = Me.DepartamentoTableAdapter
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.DepartamentoTableAdapter = Nothing
         Me.TableAdapterManager.EmpleadosTableAdapter = Nothing
         Me.TableAdapterManager.PuestoTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = ES_Nomina.ESNominaTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -136,11 +130,11 @@ Partial Class FrmDepartamento
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(427, 374)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -164,6 +158,5 @@ Partial Class FrmDepartamento
     Friend WithEvents DepartamentoBindingSource As BindingSource
     Friend WithEvents DepartamentoTableAdapter As ESNominaTableAdapters.DepartamentoTableAdapter
     Friend WithEvents TableAdapterManager As ESNominaTableAdapters.TableAdapterManager
-    Friend WithEvents IdDepartamentoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombreDepartamentoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

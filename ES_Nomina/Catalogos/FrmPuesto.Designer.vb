@@ -32,7 +32,6 @@ Partial Class FrmPuesto
         Me.PuestoTableAdapter = New ES_Nomina.ESNominaTableAdapters.PuestoTableAdapter()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.IdPuestoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombrePuestoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.ESNomina, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PuestoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -99,26 +98,20 @@ Partial Class FrmPuesto
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdPuestoDataGridViewTextBoxColumn, Me.NombrePuestoDataGridViewTextBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NombrePuestoDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.PuestoBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(35, 200)
+        Me.DataGridView1.Location = New System.Drawing.Point(34, 200)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(329, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(330, 150)
         Me.DataGridView1.TabIndex = 5
-        '
-        'IdPuestoDataGridViewTextBoxColumn
-        '
-        Me.IdPuestoDataGridViewTextBoxColumn.DataPropertyName = "idPuesto"
-        Me.IdPuestoDataGridViewTextBoxColumn.HeaderText = "idPuesto"
-        Me.IdPuestoDataGridViewTextBoxColumn.Name = "IdPuestoDataGridViewTextBoxColumn"
-        Me.IdPuestoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'NombrePuestoDataGridViewTextBoxColumn
         '
+        Me.NombrePuestoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.NombrePuestoDataGridViewTextBoxColumn.DataPropertyName = "NombrePuesto"
-        Me.NombrePuestoDataGridViewTextBoxColumn.HeaderText = "NombrePuesto"
+        Me.NombrePuestoDataGridViewTextBoxColumn.HeaderText = "Puesto"
         Me.NombrePuestoDataGridViewTextBoxColumn.Name = "NombrePuestoDataGridViewTextBoxColumn"
         Me.NombrePuestoDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -154,6 +147,5 @@ Partial Class FrmPuesto
     Friend WithEvents PuestoTableAdapter As ESNominaTableAdapters.PuestoTableAdapter
     Friend WithEvents Button1 As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents IdPuestoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombrePuestoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

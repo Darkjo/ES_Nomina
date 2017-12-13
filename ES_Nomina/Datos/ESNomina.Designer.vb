@@ -2227,11 +2227,11 @@ Namespace ESNominaTableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "INSERT INTO [ESNomina].[dbo].[Empleados] ([Username], [PassEmpleado], [NombreEmpl"& _ 
-                "eado], [TelefonoEmpleado], [Sueldo], [Estado], [Marcado], [Catalogo], [Consulta]"& _ 
-                ", [Reporte], [Administrador]) VALUES (@Username, @PassEmpleado, @NombreEmpleado,"& _ 
-                " @TelefonoEmpleado, @Sueldo, @Estado, @Marcado, @Catalogo, @Consulta, @Reporte, "& _ 
-                "@Administrador)"
+            Me._commandCollection(1).CommandText = "INSERT INTO Empleados"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&" (Username, PassEmpleado, NombreEmpleado, TelefonoEmpleado"& _ 
+                ", Sueldo, Estado, Marcado, Catalogo, Consulta, Reporte, Administrador, idDeparta"& _ 
+                "mento, idPuesto)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES (@Username,@PassEmpleado,@NombreEmpleado,@TelefonoEmple"& _ 
+                "ado,@Sueldo,@Estado,@Marcado,@Catalogo,@Consulta,@Reporte,@Administrador,@idDepa"& _ 
+                "rtamento,@idPuesto)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Username", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "Username", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PassEmpleado", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "PassEmpleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -2244,6 +2244,8 @@ Namespace ESNominaTableAdapters
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Consulta", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Consulta", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Reporte", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Reporte", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Administrador", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Administrador", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idDepartamento", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idDepartamento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idPuesto", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idPuesto", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
             Me._commandCollection(2).CommandText = "UPDATE Empleados"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET  PassEmpleado = @PassEmpleado"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  (Username = @Username"& _ 
@@ -2254,16 +2256,16 @@ Namespace ESNominaTableAdapters
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
             Me._commandCollection(3).CommandText = "SELECT Administrador, Catalogo, Consulta, Estado, Marcado, NombreEmpleado, PassEm"& _ 
-                "pleado, Reporte, Sueldo, TelefonoEmpleado, Username, idDepartamento, idEmpleados"& _ 
-                ", idPuesto FROM Empleados WHERE (Username = @Username)"
+                "pleado, Reporte, Sueldo, TelefonoEmpleado, Username, idDepartamento, idPuesto"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"F"& _ 
+                "ROM     Empleados"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  (Username = @Username)"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Username", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "Username", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(4).Connection = Me.Connection
             Me._commandCollection(4).CommandText = "SELECT Administrador, Catalogo, Consulta, Estado, Marcado, NombreEmpleado, PassEm"& _ 
-                "pleado, Reporte, Sueldo, TelefonoEmpleado, Username, idDepartamento, idEmpleados"& _ 
-                ", idPuesto FROM Empleados WHERE (Username = @Username) AND (PassEmpleado = @Pass"& _ 
-                "Empleado) AND (Estado = 'True')"
+                "pleado, Reporte, Sueldo, TelefonoEmpleado, Username, idDepartamento, idPuesto"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"F"& _ 
+                "ROM     Empleados"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  (Username = @Username) AND (PassEmpleado = @PassEmplea"& _ 
+                "do) AND (Estado = 'True')"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Username", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "Username", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PassEmpleado", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "PassEmpleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -2832,7 +2834,7 @@ Namespace ESNominaTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
-        Public Overloads Overridable Function AGREGAR(ByVal Username As String, ByVal PassEmpleado As String, ByVal NombreEmpleado As String, ByVal TelefonoEmpleado As Global.System.Nullable(Of Integer), ByVal Sueldo As Global.System.Nullable(Of Integer), ByVal Estado As Global.System.Nullable(Of Boolean), ByVal Marcado As Global.System.Nullable(Of Boolean), ByVal Catalogo As Global.System.Nullable(Of Boolean), ByVal Consulta As Global.System.Nullable(Of Boolean), ByVal Reporte As Global.System.Nullable(Of Boolean), ByVal Administrador As Global.System.Nullable(Of Boolean)) As Integer
+        Public Overloads Overridable Function AGREGAR(ByVal Username As String, ByVal PassEmpleado As String, ByVal NombreEmpleado As String, ByVal TelefonoEmpleado As Global.System.Nullable(Of Integer), ByVal Sueldo As Global.System.Nullable(Of Integer), ByVal Estado As Global.System.Nullable(Of Boolean), ByVal Marcado As Global.System.Nullable(Of Boolean), ByVal Catalogo As Global.System.Nullable(Of Boolean), ByVal Consulta As Global.System.Nullable(Of Boolean), ByVal Reporte As Global.System.Nullable(Of Boolean), ByVal Administrador As Global.System.Nullable(Of Boolean), ByVal idDepartamento As Global.System.Nullable(Of Integer), ByVal idPuesto As Global.System.Nullable(Of Integer)) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
             If (Username Is Nothing) Then
                 command.Parameters(0).Value = Global.System.DBNull.Value
@@ -2888,6 +2890,16 @@ Namespace ESNominaTableAdapters
                 command.Parameters(10).Value = CType(Administrador.Value,Boolean)
             Else
                 command.Parameters(10).Value = Global.System.DBNull.Value
+            End If
+            If (idDepartamento.HasValue = true) Then
+                command.Parameters(11).Value = CType(idDepartamento.Value,Integer)
+            Else
+                command.Parameters(11).Value = Global.System.DBNull.Value
+            End If
+            If (idPuesto.HasValue = true) Then
+                command.Parameters(12).Value = CType(idPuesto.Value,Integer)
+            Else
+                command.Parameters(12).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -3240,11 +3252,17 @@ Namespace ESNominaTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Departamento.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM     Departamento"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "INSERT INTO Departamento"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  (NombreDepartamento)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES (@Nombre"& _ 
+                "Departamento)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NombreDepartamento", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "NombreDepartamento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3392,6 +3410,33 @@ Namespace ESNominaTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update(ByVal NombreDepartamento As String, ByVal Original_idDepartamento As Integer, ByVal Original_NombreDepartamento As String) As Integer
             Return Me.Update(NombreDepartamento, Original_idDepartamento, Original_NombreDepartamento, Original_idDepartamento)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
+        Public Overloads Overridable Function AGREGAR(ByVal NombreDepartamento As String) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
+            If (NombreDepartamento Is Nothing) Then
+                command.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(0).Value = CType(NombreDepartamento,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
         End Function
     End Class
     
@@ -3564,11 +3609,16 @@ Namespace ESNominaTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Puesto.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM     Puesto"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "INSERT INTO [Puesto] ([NombrePuesto]) VALUES (@NombrePuesto)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NombrePuesto", Global.System.Data.SqlDbType.NChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "NombrePuesto", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3716,6 +3766,33 @@ Namespace ESNominaTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update(ByVal NombrePuesto As String, ByVal Original_idPuesto As Integer, ByVal Original_NombrePuesto As String) As Integer
             Return Me.Update(NombrePuesto, Original_idPuesto, Original_NombrePuesto, Original_idPuesto)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
+        Public Overloads Overridable Function AGREGAR(ByVal NombrePuesto As String) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
+            If (NombrePuesto Is Nothing) Then
+                command.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(0).Value = CType(NombrePuesto,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
         End Function
     End Class
     
