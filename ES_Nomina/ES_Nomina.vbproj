@@ -115,7 +115,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ESNomina.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Datos\ESNominaDataSet.Designer.vb">
+    <Compile Include="ESNominaDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ESNominaDataSet.xsd</DependentUpon>
@@ -208,15 +208,15 @@
     <None Include="Datos\ESNomina.xss">
       <DependentUpon>ESNomina.xsd</DependentUpon>
     </None>
-    <None Include="Datos\ESNominaDataSet.xsc">
+    <None Include="ESNominaDataSet.xsc">
       <DependentUpon>ESNominaDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Datos\ESNominaDataSet.xsd">
+    <None Include="ESNominaDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ESNominaDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Datos\ESNominaDataSet.xss">
+    <None Include="ESNominaDataSet.xss">
       <DependentUpon>ESNominaDataSet.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
