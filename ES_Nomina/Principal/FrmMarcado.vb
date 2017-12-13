@@ -10,31 +10,7 @@ Public Class FrmMarcado
         Label4.Text = Date.Now.ToLongTimeString
     End Sub
 
-    Private Sub TextBox1_KeyUp(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyUp
-        Try
-            ' Obtenemos un objeto DataRow correspondiente con
-            ' el ID escrito en un control TextBox
-            '
-            Dim row As DataRow = Buscar(TextBox1.Text)
 
-            If (row Is Nothing) Then
-                MessageBox.Show("No hay registros que coincidan con el ID especificado.")
-                ' Abandonamos el procedimiento
-                Return
-            End If
-
-            ' Rellenamos los correspondientes controles TextBox
-            ' con los datos existentes en el objeto DataRow
-            ' obtenido.
-            '
-            TextBox2.Text = row("NombreEmpleados")
-
-        Catch ex As Exception
-            ' Se ha producido un error
-            MessageBox.Show(ex.Message)
-
-        End Try
-    End Sub
 
     Private Function Buscar(id As String) As DataRow
 
@@ -101,7 +77,33 @@ Public Class FrmMarcado
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        MostrarEmp.Visible = True
+    End Sub
 
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        Try
+            ' Obtenemos un objeto DataRow correspondiente con
+            ' el ID escrito en un control TextBox
+            '
+            Dim row As DataRow = Buscar(TextBox1.Text)
+
+            If (row Is Nothing) Then
+                MessageBox.Show("No hay registros que coincidan con el ID especificado.")
+                ' Abandonamos el procedimiento
+                Return
+            End If
+
+            ' Rellenamos los correspondientes controles TextBox
+            ' con los datos existentes en el objeto DataRow
+            ' obtenido.
+            '
+            TextBox2.Text = row("NombreEmpleados")
+
+        Catch ex As Exception
+            ' Se ha producido un error
+            MessageBox.Show(ex.Message)
+
+        End Try
     End Sub
 End Class
 

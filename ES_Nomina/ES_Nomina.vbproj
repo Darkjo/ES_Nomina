@@ -143,6 +143,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ESNominaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Principal\MostrarEmp.Designer.vb">
+      <DependentUpon>MostrarEmp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\MostrarEmp.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ReportesNomina\ESNominaDataSetReportes.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -229,6 +235,9 @@
     <EmbeddedResource Include="Principal\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Principal\MostrarEmp.resx">
+      <DependentUpon>MostrarEmp.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Principal\SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
     </EmbeddedResource>
@@ -297,20 +306,6 @@
     <Content Include="Resources\list_1-48.png" />
     <Content Include="Resources\Logout_exit-48.png" />
     <Content Include="Resources\thin-1078_kpi_dashboard_report-48.png" />
-    <Content Include="SqlServerTypes\Loader.cs" />
-    <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
