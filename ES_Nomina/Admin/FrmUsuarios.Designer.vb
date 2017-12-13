@@ -1,6 +1,4 @@
-﻿Imports System.Windows.Forms
-
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmUsuarios
     Inherits System.Windows.Forms.Form
 
