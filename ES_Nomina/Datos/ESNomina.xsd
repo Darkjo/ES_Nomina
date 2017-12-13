@@ -370,6 +370,27 @@ SELECT idPuesto, NombrePuesto FROM Puesto WHERE (idPuesto = @idPuesto)</CommandT
               </DbSource>
             </Sources>
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MarcadoTableAdapter" GeneratorDataComponentClassName="MarcadoTableAdapter" Name="Marcado" UserDataComponentName="MarcadoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ESNominaConnection (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Marcado.HoraMarcado AS Hora, Marcado.FechaMarcado AS Fecha, Marcado.TipoMarcado AS Tipo, Empleados.NombreEmpleado AS Empleado
+FROM     Marcado INNER JOIN
+                  Empleados ON Marcado.idEmpleados = Empleados.idEmpleados</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Hora" DataSetColumn="Hora" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="Tipo" DataSetColumn="Tipo" />
+              <Mapping SourceColumn="Empleado" DataSetColumn="Empleado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -378,7 +399,7 @@ SELECT idPuesto, NombrePuesto FROM Puesto WHERE (idPuesto = @idPuesto)</CommandT
   <xs:element name="ESNomina" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ESNomina" msprop:Generator_UserDSName="ESNomina">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Empleados" msprop:Generator_TableClassName="EmpleadosDataTable" msprop:Generator_TableVarName="tableEmpleados" msprop:Generator_TablePropName="Empleados" msprop:Generator_RowDeletingName="EmpleadosRowDeleting" msprop:Generator_RowChangingName="EmpleadosRowChanging" msprop:Generator_RowEvHandlerName="EmpleadosRowChangeEventHandler" msprop:Generator_RowDeletedName="EmpleadosRowDeleted" msprop:Generator_UserTableName="Empleados" msprop:Generator_RowChangedName="EmpleadosRowChanged" msprop:Generator_RowEvArgName="EmpleadosRowChangeEvent" msprop:Generator_RowClassName="EmpleadosRow">
+        <xs:element name="Empleados" msprop:Generator_TableClassName="EmpleadosDataTable" msprop:Generator_TableVarName="tableEmpleados" msprop:Generator_RowChangedName="EmpleadosRowChanged" msprop:Generator_TablePropName="Empleados" msprop:Generator_RowDeletingName="EmpleadosRowDeleting" msprop:Generator_RowChangingName="EmpleadosRowChanging" msprop:Generator_RowEvHandlerName="EmpleadosRowChangeEventHandler" msprop:Generator_RowDeletedName="EmpleadosRowDeleted" msprop:Generator_RowClassName="EmpleadosRow" msprop:Generator_UserTableName="Empleados" msprop:Generator_RowEvArgName="EmpleadosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idEmpleados" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidEmpleados" msprop:Generator_ColumnPropNameInRow="idEmpleados" msprop:Generator_ColumnPropNameInTable="idEmpleadosColumn" msprop:Generator_UserColumnName="idEmpleados" type="xs:int" />
@@ -416,7 +437,7 @@ SELECT idPuesto, NombrePuesto FROM Puesto WHERE (idPuesto = @idPuesto)</CommandT
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Departamento" msprop:Generator_TableClassName="DepartamentoDataTable" msprop:Generator_TableVarName="tableDepartamento" msprop:Generator_TablePropName="Departamento" msprop:Generator_RowDeletingName="DepartamentoRowDeleting" msprop:Generator_RowChangingName="DepartamentoRowChanging" msprop:Generator_RowEvHandlerName="DepartamentoRowChangeEventHandler" msprop:Generator_RowDeletedName="DepartamentoRowDeleted" msprop:Generator_UserTableName="Departamento" msprop:Generator_RowChangedName="DepartamentoRowChanged" msprop:Generator_RowEvArgName="DepartamentoRowChangeEvent" msprop:Generator_RowClassName="DepartamentoRow">
+        <xs:element name="Departamento" msprop:Generator_TableClassName="DepartamentoDataTable" msprop:Generator_TableVarName="tableDepartamento" msprop:Generator_RowChangedName="DepartamentoRowChanged" msprop:Generator_TablePropName="Departamento" msprop:Generator_RowDeletingName="DepartamentoRowDeleting" msprop:Generator_RowChangingName="DepartamentoRowChanging" msprop:Generator_RowEvHandlerName="DepartamentoRowChangeEventHandler" msprop:Generator_RowDeletedName="DepartamentoRowDeleted" msprop:Generator_RowClassName="DepartamentoRow" msprop:Generator_UserTableName="Departamento" msprop:Generator_RowEvArgName="DepartamentoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idDepartamento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidDepartamento" msprop:Generator_ColumnPropNameInRow="idDepartamento" msprop:Generator_ColumnPropNameInTable="idDepartamentoColumn" msprop:Generator_UserColumnName="idDepartamento" type="xs:int" />
@@ -430,11 +451,33 @@ SELECT idPuesto, NombrePuesto FROM Puesto WHERE (idPuesto = @idPuesto)</CommandT
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Puesto" msprop:Generator_TableClassName="PuestoDataTable" msprop:Generator_TableVarName="tablePuesto" msprop:Generator_TablePropName="Puesto" msprop:Generator_RowDeletingName="PuestoRowDeleting" msprop:Generator_RowChangingName="PuestoRowChanging" msprop:Generator_RowEvHandlerName="PuestoRowChangeEventHandler" msprop:Generator_RowDeletedName="PuestoRowDeleted" msprop:Generator_UserTableName="Puesto" msprop:Generator_RowChangedName="PuestoRowChanged" msprop:Generator_RowEvArgName="PuestoRowChangeEvent" msprop:Generator_RowClassName="PuestoRow">
+        <xs:element name="Puesto" msprop:Generator_TableClassName="PuestoDataTable" msprop:Generator_TableVarName="tablePuesto" msprop:Generator_RowChangedName="PuestoRowChanged" msprop:Generator_TablePropName="Puesto" msprop:Generator_RowDeletingName="PuestoRowDeleting" msprop:Generator_RowChangingName="PuestoRowChanging" msprop:Generator_RowEvHandlerName="PuestoRowChangeEventHandler" msprop:Generator_RowDeletedName="PuestoRowDeleted" msprop:Generator_RowClassName="PuestoRow" msprop:Generator_UserTableName="Puesto" msprop:Generator_RowEvArgName="PuestoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idPuesto" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidPuesto" msprop:Generator_ColumnPropNameInRow="idPuesto" msprop:Generator_ColumnPropNameInTable="idPuestoColumn" msprop:Generator_UserColumnName="idPuesto" type="xs:int" />
               <xs:element name="NombrePuesto" msprop:Generator_ColumnVarNameInTable="columnNombrePuesto" msprop:Generator_ColumnPropNameInRow="NombrePuesto" msprop:Generator_ColumnPropNameInTable="NombrePuestoColumn" msprop:Generator_UserColumnName="NombrePuesto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Marcado" msprop:Generator_TableClassName="MarcadoDataTable" msprop:Generator_TableVarName="tableMarcado" msprop:Generator_TablePropName="Marcado" msprop:Generator_RowDeletingName="MarcadoRowDeleting" msprop:Generator_RowChangingName="MarcadoRowChanging" msprop:Generator_RowEvHandlerName="MarcadoRowChangeEventHandler" msprop:Generator_RowDeletedName="MarcadoRowDeleted" msprop:Generator_UserTableName="Marcado" msprop:Generator_RowChangedName="MarcadoRowChanged" msprop:Generator_RowEvArgName="MarcadoRowChangeEvent" msprop:Generator_RowClassName="MarcadoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Hora" msprop:Generator_ColumnVarNameInTable="columnHora" msprop:Generator_ColumnPropNameInRow="Hora" msprop:Generator_ColumnPropNameInTable="HoraColumn" msprop:Generator_UserColumnName="Hora" type="xs:duration" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Tipo" msprop:Generator_ColumnVarNameInTable="columnTipo" msprop:Generator_ColumnPropNameInRow="Tipo" msprop:Generator_ColumnPropNameInTable="TipoColumn" msprop:Generator_UserColumnName="Tipo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Empleado" msprop:Generator_ColumnVarNameInTable="columnEmpleado" msprop:Generator_ColumnPropNameInRow="Empleado" msprop:Generator_ColumnPropNameInTable="EmpleadoColumn" msprop:Generator_UserColumnName="Empleado" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
