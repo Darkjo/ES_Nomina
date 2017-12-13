@@ -69,4 +69,10 @@
         Puesto.MdiParent = Me
         Puesto.Show()
     End Sub
+
+    Private Sub EmpleadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmpleadosToolStripMenuItem.Click
+        Dim Repport As New Report1()
+        Repport.MdiParent = Me
+        Repport.Show()
+    End Sub
 End Class
