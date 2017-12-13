@@ -28,9 +28,9 @@ Partial Class Consutlas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 259)
+        Me.ClientSize = New System.Drawing.Size(1120, 722)
         Me.Name = "Consutlas"
-        Me.Text = "Consutlas"
+        Me.Text = "Consultas"
         Me.ResumeLayout(False)
 
     End Sub

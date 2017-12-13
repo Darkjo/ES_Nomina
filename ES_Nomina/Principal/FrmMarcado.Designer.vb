@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿Imports System.Windows.Forms
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmMarcado
     Inherits System.Windows.Forms.Form
 
@@ -43,6 +45,7 @@ Partial Class FrmMarcado
         Me.Button2 = New System.Windows.Forms.Button()
         Me.MarcadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MarcadoTableAdapter = New ES_Nomina.ESNominaTableAdapters.MarcadoTableAdapter()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ESNomina, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -202,11 +205,21 @@ Partial Class FrmMarcado
         '
         Me.MarcadoTableAdapter.ClearBeforeFill = True
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(339, 183)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(51, 17)
+        Me.Label5.TabIndex = 9
+        Me.Label5.Text = "Label5"
+        '
         'FrmMarcado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(715, 349)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
@@ -264,4 +277,5 @@ Partial Class FrmMarcado
     Friend WithEvents Button2 As Button
     Friend WithEvents MarcadoBindingSource As BindingSource
     Friend WithEvents MarcadoTableAdapter As ESNominaTableAdapters.MarcadoTableAdapter
+    Friend WithEvents Label5 As Label
 End Class
