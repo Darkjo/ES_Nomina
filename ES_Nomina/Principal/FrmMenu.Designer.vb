@@ -43,6 +43,7 @@ Partial Class FrmMenu
         Me.RespaldoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.cerrarSesion = New System.Windows.Forms.ToolStripMenuItem()
         Me.opcionSalir = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -107,7 +108,7 @@ Partial Class FrmMenu
         Me.menuCatalogos.Image = CType(resources.GetObject("menuCatalogos.Image"), System.Drawing.Image)
         Me.menuCatalogos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.menuCatalogos.Name = "menuCatalogos"
-        Me.menuCatalogos.Size = New System.Drawing.Size(108, 72)
+        Me.menuCatalogos.Size = New System.Drawing.Size(101, 72)
         Me.menuCatalogos.Text = "Catálogos"
         Me.menuCatalogos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -129,12 +130,13 @@ Partial Class FrmMenu
         Me.menuConsultas.Image = CType(resources.GetObject("menuConsultas.Image"), System.Drawing.Image)
         Me.menuConsultas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.menuConsultas.Name = "menuConsultas"
-        Me.menuConsultas.Size = New System.Drawing.Size(108, 72)
+        Me.menuConsultas.Size = New System.Drawing.Size(101, 72)
         Me.menuConsultas.Text = "Consulta"
         Me.menuConsultas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'menuReportes
         '
+        Me.menuReportes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpleadosToolStripMenuItem})
         Me.menuReportes.Enabled = False
         Me.menuReportes.Image = CType(resources.GetObject("menuReportes.Image"), System.Drawing.Image)
         Me.menuReportes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
@@ -150,7 +152,7 @@ Partial Class FrmMenu
         Me.menuAdmin.Image = CType(resources.GetObject("menuAdmin.Image"), System.Drawing.Image)
         Me.menuAdmin.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.menuAdmin.Name = "menuAdmin"
-        Me.menuAdmin.Size = New System.Drawing.Size(108, 72)
+        Me.menuAdmin.Size = New System.Drawing.Size(101, 72)
         Me.menuAdmin.Text = "Admin"
         Me.menuAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -177,7 +179,7 @@ Partial Class FrmMenu
         Me.cerrarSesion.Image = CType(resources.GetObject("cerrarSesion.Image"), System.Drawing.Image)
         Me.cerrarSesion.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.cerrarSesion.Name = "cerrarSesion"
-        Me.cerrarSesion.Size = New System.Drawing.Size(108, 72)
+        Me.cerrarSesion.Size = New System.Drawing.Size(101, 72)
         Me.cerrarSesion.Text = "Cerrar Sesion"
         Me.cerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -187,9 +189,15 @@ Partial Class FrmMenu
         Me.opcionSalir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.opcionSalir.Name = "opcionSalir"
         Me.opcionSalir.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.opcionSalir.Size = New System.Drawing.Size(108, 72)
+        Me.opcionSalir.Size = New System.Drawing.Size(101, 72)
         Me.opcionSalir.Text = "Salir"
         Me.opcionSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'EmpleadosToolStripMenuItem
+        '
+        Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
         'FrmMenu
         '
@@ -232,4 +240,5 @@ Partial Class FrmMenu
     Friend WithEvents opcionSalir As ToolStripMenuItem
     Friend WithEvents DepartamentoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PuestoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EmpleadosToolStripMenuItem As ToolStripMenuItem
 End Class
