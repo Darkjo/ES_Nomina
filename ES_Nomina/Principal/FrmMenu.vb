@@ -57,4 +57,16 @@
         BackUp.MdiParent = Me
         BackUp.Show()
     End Sub
+
+    Private Sub DepartamentoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DepartamentoToolStripMenuItem.Click
+        Dim Dept As New FrmDepartamento()
+        Dept.MdiParent = Me
+        Dept.Show()
+    End Sub
+
+    Private Sub PuestoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PuestoToolStripMenuItem.Click
+        Dim Puesto As New FrmPuesto()
+        Puesto.MdiParent = Me
+        Puesto.Show()
+    End Sub
 End Class

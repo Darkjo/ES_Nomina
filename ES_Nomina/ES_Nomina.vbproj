@@ -98,10 +98,27 @@
     <Compile Include="Admin\FrmUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Catalogos\FrmDepartamento.Designer.vb">
+      <DependentUpon>FrmDepartamento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\FrmDepartamento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\FrmPuesto.Designer.vb">
+      <DependentUpon>FrmPuesto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\FrmPuesto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Datos\ESNomina.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ESNomina.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ESNominaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ESNominaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -154,6 +171,12 @@
     <EmbeddedResource Include="Admin\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\FrmDepartamento.resx">
+      <DependentUpon>FrmDepartamento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\FrmPuesto.resx">
+      <DependentUpon>FrmPuesto.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Principal\FrmMarcado.resx">
       <DependentUpon>FrmMarcado.vb</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +207,17 @@
     </None>
     <None Include="Datos\ESNomina.xss">
       <DependentUpon>ESNomina.xsd</DependentUpon>
+    </None>
+    <None Include="ESNominaDataSet.xsc">
+      <DependentUpon>ESNominaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ESNominaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ESNominaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ESNominaDataSet.xss">
+      <DependentUpon>ESNominaDataSet.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

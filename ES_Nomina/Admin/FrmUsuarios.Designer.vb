@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmUsuarios
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmUsuarios
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUsuarios))
@@ -40,6 +40,17 @@ Partial Class FrmUsuarios
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.EmpleadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ESNomina = New ES_Nomina.ESNomina()
+        Me.ESNominaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EmpleadosTableAdapter = New ES_Nomina.ESNominaTableAdapters.EmpleadosTableAdapter()
+        Me.TableAdapterManager = New ES_Nomina.ESNominaTableAdapters.TableAdapterManager()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PassEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -52,23 +63,14 @@ Partial Class FrmUsuarios
         Me.ConsultaDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.ReporteDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.AdministradorDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.EmpleadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ESNomina = New ES_Nomina.ESNomina()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.ESNominaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EmpleadosTableAdapter = New ES_Nomina.ESNominaTableAdapters.EmpleadosTableAdapter()
-        Me.TableAdapterManager = New ES_Nomina.ESNominaTableAdapters.TableAdapterManager()
+        Me.IdDepartamentoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdPuestoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ESNomina, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ESNominaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -249,15 +251,92 @@ Partial Class FrmUsuarios
         Me.Button4.Text = "Reiniciar Clave"
         Me.Button4.UseVisualStyleBackColor = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(654, 47)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(342, 296)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 12
+        Me.PictureBox1.TabStop = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(141, 47)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(219, 28)
+        Me.TextBox1.TabIndex = 13
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(141, 94)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(219, 28)
+        Me.TextBox2.TabIndex = 14
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(235, 141)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(393, 28)
+        Me.TextBox3.TabIndex = 15
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.Location = New System.Drawing.Point(454, 47)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(174, 28)
+        Me.TextBox4.TabIndex = 16
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.Location = New System.Drawing.Point(454, 95)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(174, 28)
+        Me.TextBox5.TabIndex = 17
+        '
+        'EmpleadosBindingSource
+        '
+        Me.EmpleadosBindingSource.DataMember = "Empleados"
+        Me.EmpleadosBindingSource.DataSource = Me.ESNomina
+        '
+        'ESNomina
+        '
+        Me.ESNomina.DataSetName = "ESNomina"
+        Me.ESNomina.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ESNominaBindingSource
+        '
+        Me.ESNominaBindingSource.DataSource = Me.ESNomina
+        Me.ESNominaBindingSource.Position = 0
+        '
+        'EmpleadosTableAdapter
+        '
+        Me.EmpleadosTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.DepartamentoTableAdapter = Nothing
+        Me.TableAdapterManager.EmpleadosTableAdapter = Me.EmpleadosTableAdapter
+        Me.TableAdapterManager.PuestoTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = ES_Nomina.ESNominaTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.UsernameDataGridViewTextBoxColumn, Me.PassEmpleadoDataGridViewTextBoxColumn, Me.NombreEmpleadoDataGridViewTextBoxColumn, Me.TelefonoEmpleadoDataGridViewTextBoxColumn, Me.SueldoDataGridViewTextBoxColumn, Me.EstadoDataGridViewCheckBoxColumn, Me.MarcadoDataGridViewCheckBoxColumn, Me.CatalogoDataGridViewCheckBoxColumn, Me.ConsultaDataGridViewCheckBoxColumn, Me.ReporteDataGridViewCheckBoxColumn, Me.AdministradorDataGridViewCheckBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.UsernameDataGridViewTextBoxColumn, Me.PassEmpleadoDataGridViewTextBoxColumn, Me.NombreEmpleadoDataGridViewTextBoxColumn, Me.TelefonoEmpleadoDataGridViewTextBoxColumn, Me.SueldoDataGridViewTextBoxColumn, Me.EstadoDataGridViewCheckBoxColumn, Me.MarcadoDataGridViewCheckBoxColumn, Me.CatalogoDataGridViewCheckBoxColumn, Me.ConsultaDataGridViewCheckBoxColumn, Me.ReporteDataGridViewCheckBoxColumn, Me.AdministradorDataGridViewCheckBoxColumn, Me.IdDepartamentoDataGridViewTextBoxColumn, Me.IdPuestoDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.EmpleadosBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(36, 392)
+        Me.DataGridView1.Location = New System.Drawing.Point(36, 381)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowTemplate.Height = 24
@@ -341,86 +420,25 @@ Partial Class FrmUsuarios
         Me.AdministradorDataGridViewCheckBoxColumn.Name = "AdministradorDataGridViewCheckBoxColumn"
         Me.AdministradorDataGridViewCheckBoxColumn.ReadOnly = True
         '
-        'EmpleadosBindingSource
+        'IdDepartamentoDataGridViewTextBoxColumn
         '
-        Me.EmpleadosBindingSource.DataMember = "Empleados"
-        Me.EmpleadosBindingSource.DataSource = Me.ESNomina
+        Me.IdDepartamentoDataGridViewTextBoxColumn.DataPropertyName = "idDepartamento"
+        Me.IdDepartamentoDataGridViewTextBoxColumn.HeaderText = "idDepartamento"
+        Me.IdDepartamentoDataGridViewTextBoxColumn.Name = "IdDepartamentoDataGridViewTextBoxColumn"
+        Me.IdDepartamentoDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'ESNomina
+        'IdPuestoDataGridViewTextBoxColumn
         '
-        Me.ESNomina.DataSetName = "ESNomina"
-        Me.ESNomina.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(654, 47)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(342, 296)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 12
-        Me.PictureBox1.TabStop = False
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(141, 47)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(219, 28)
-        Me.TextBox1.TabIndex = 13
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(141, 94)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(219, 28)
-        Me.TextBox2.TabIndex = 14
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(235, 141)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(393, 28)
-        Me.TextBox3.TabIndex = 15
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(454, 47)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(174, 28)
-        Me.TextBox4.TabIndex = 16
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(454, 95)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(174, 28)
-        Me.TextBox5.TabIndex = 17
-        '
-        'ESNominaBindingSource
-        '
-        Me.ESNominaBindingSource.DataSource = Me.ESNomina
-        Me.ESNominaBindingSource.Position = 0
-        '
-        'EmpleadosTableAdapter
-        '
-        Me.EmpleadosTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.EmpleadosTableAdapter = Me.EmpleadosTableAdapter
-        Me.TableAdapterManager.UpdateOrder = ES_Nomina.ESNominaTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.IdPuestoDataGridViewTextBoxColumn.DataPropertyName = "idPuesto"
+        Me.IdPuestoDataGridViewTextBoxColumn.HeaderText = "idPuesto"
+        Me.IdPuestoDataGridViewTextBoxColumn.Name = "IdPuestoDataGridViewTextBoxColumn"
+        Me.IdPuestoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'FrmUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1023, 689)
+        Me.ClientSize = New System.Drawing.Size(1023, 697)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox3)
@@ -448,11 +466,11 @@ Partial Class FrmUsuarios
         Me.Text = "Manejo de Usuarios"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ESNomina, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ESNominaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -474,7 +492,6 @@ Partial Class FrmUsuarios
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents ESNominaBindingSource As BindingSource
     Friend WithEvents ESNomina As ESNomina
     Friend WithEvents EmpleadosBindingSource As BindingSource
@@ -486,6 +503,7 @@ Partial Class FrmUsuarios
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents UsernameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PassEmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombreEmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -497,4 +515,6 @@ Partial Class FrmUsuarios
     Friend WithEvents ConsultaDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
     Friend WithEvents ReporteDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
     Friend WithEvents AdministradorDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents IdDepartamentoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdPuestoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

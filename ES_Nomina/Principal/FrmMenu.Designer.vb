@@ -34,13 +34,9 @@ Partial Class FrmMenu
         Me.menuMarcado = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuCatalogos = New System.Windows.Forms.ToolStripMenuItem()
         Me.DepartamentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CiudadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PuestoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EstadoCivilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuConsultas = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SoloAdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuReportes = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SoloAdminToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuAdmin = New System.Windows.Forms.ToolStripMenuItem()
         Me.GestionDeUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CambioDeContraseñaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -106,7 +102,7 @@ Partial Class FrmMenu
         '
         'menuCatalogos
         '
-        Me.menuCatalogos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DepartamentoToolStripMenuItem, Me.CiudadToolStripMenuItem, Me.PuestoToolStripMenuItem, Me.EstadoCivilToolStripMenuItem})
+        Me.menuCatalogos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DepartamentoToolStripMenuItem, Me.PuestoToolStripMenuItem})
         Me.menuCatalogos.Enabled = False
         Me.menuCatalogos.Image = CType(resources.GetObject("menuCatalogos.Image"), System.Drawing.Image)
         Me.menuCatalogos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
@@ -121,27 +117,14 @@ Partial Class FrmMenu
         Me.DepartamentoToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.DepartamentoToolStripMenuItem.Text = "Departamento"
         '
-        'CiudadToolStripMenuItem
-        '
-        Me.CiudadToolStripMenuItem.Name = "CiudadToolStripMenuItem"
-        Me.CiudadToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
-        Me.CiudadToolStripMenuItem.Text = "Ciudad"
-        '
         'PuestoToolStripMenuItem
         '
         Me.PuestoToolStripMenuItem.Name = "PuestoToolStripMenuItem"
         Me.PuestoToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.PuestoToolStripMenuItem.Text = "Puesto"
         '
-        'EstadoCivilToolStripMenuItem
-        '
-        Me.EstadoCivilToolStripMenuItem.Name = "EstadoCivilToolStripMenuItem"
-        Me.EstadoCivilToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
-        Me.EstadoCivilToolStripMenuItem.Text = "Estado Civil"
-        '
         'menuConsultas
         '
-        Me.menuConsultas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SoloAdminToolStripMenuItem})
         Me.menuConsultas.Enabled = False
         Me.menuConsultas.Image = CType(resources.GetObject("menuConsultas.Image"), System.Drawing.Image)
         Me.menuConsultas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
@@ -150,15 +133,8 @@ Partial Class FrmMenu
         Me.menuConsultas.Text = "Consulta"
         Me.menuConsultas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
-        'SoloAdminToolStripMenuItem
-        '
-        Me.SoloAdminToolStripMenuItem.Name = "SoloAdminToolStripMenuItem"
-        Me.SoloAdminToolStripMenuItem.Size = New System.Drawing.Size(160, 26)
-        Me.SoloAdminToolStripMenuItem.Text = "Solo admin"
-        '
         'menuReportes
         '
-        Me.menuReportes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SoloAdminToolStripMenuItem1})
         Me.menuReportes.Enabled = False
         Me.menuReportes.Image = CType(resources.GetObject("menuReportes.Image"), System.Drawing.Image)
         Me.menuReportes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
@@ -166,12 +142,6 @@ Partial Class FrmMenu
         Me.menuReportes.Size = New System.Drawing.Size(108, 72)
         Me.menuReportes.Text = "Reporte"
         Me.menuReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'SoloAdminToolStripMenuItem1
-        '
-        Me.SoloAdminToolStripMenuItem1.Name = "SoloAdminToolStripMenuItem1"
-        Me.SoloAdminToolStripMenuItem1.Size = New System.Drawing.Size(160, 26)
-        Me.SoloAdminToolStripMenuItem1.Text = "Solo admin"
         '
         'menuAdmin
         '
@@ -256,14 +226,10 @@ Partial Class FrmMenu
     Friend WithEvents menuMarcado As ToolStripMenuItem
     Friend WithEvents menuAdmin As ToolStripMenuItem
     Friend WithEvents RespaldoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SoloAdminToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SoloAdminToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents CambioDeContraseñaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GestionDeUsuarioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents cerrarSesion As ToolStripMenuItem
     Friend WithEvents opcionSalir As ToolStripMenuItem
     Friend WithEvents DepartamentoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CiudadToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PuestoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EstadoCivilToolStripMenuItem As ToolStripMenuItem
 End Class
