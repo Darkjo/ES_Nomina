@@ -48,10 +48,10 @@ Partial Class Form1
         ReportDataSource1.Value = Me.EmpleadosBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "ES_Nomina.Report1.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(1, 0)
+        Me.ReportViewer1.Location = New System.Drawing.Point(-2, 1)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(793, 522)
+        Me.ReportViewer1.Size = New System.Drawing.Size(919, 567)
         Me.ReportViewer1.TabIndex = 0
         '
         'EmpleadosTableAdapter
@@ -62,7 +62,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(790, 522)
+        Me.ClientSize = New System.Drawing.Size(915, 564)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
