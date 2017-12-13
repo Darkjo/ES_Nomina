@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmDepartamento
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmDepartamento
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmDepartamento))
@@ -29,7 +29,6 @@ Partial Class FrmDepartamento
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.NombreDepartamentoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DepartamentoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ESNomina = New ES_Nomina.ESNomina()
         Me.DepartamentoTableAdapter = New ES_Nomina.ESNominaTableAdapters.DepartamentoTableAdapter()
@@ -83,24 +82,13 @@ Partial Class FrmDepartamento
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NombreDepartamentoDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.DepartamentoBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(29, 197)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.Size = New System.Drawing.Size(370, 150)
         Me.DataGridView1.TabIndex = 8
-        '
-        'NombreDepartamentoDataGridViewTextBoxColumn
-        '
-        Me.NombreDepartamentoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.NombreDepartamentoDataGridViewTextBoxColumn.DataPropertyName = "NombreDepartamento"
-        Me.NombreDepartamentoDataGridViewTextBoxColumn.HeaderText = "Departamento"
-        Me.NombreDepartamentoDataGridViewTextBoxColumn.Name = "NombreDepartamentoDataGridViewTextBoxColumn"
-        Me.NombreDepartamentoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'DepartamentoBindingSource
         '
@@ -158,5 +146,4 @@ Partial Class FrmDepartamento
     Friend WithEvents DepartamentoBindingSource As BindingSource
     Friend WithEvents DepartamentoTableAdapter As ESNominaTableAdapters.DepartamentoTableAdapter
     Friend WithEvents TableAdapterManager As ESNominaTableAdapters.TableAdapterManager
-    Friend WithEvents NombreDepartamentoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
