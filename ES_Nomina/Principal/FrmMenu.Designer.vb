@@ -37,13 +37,13 @@ Partial Class FrmMenu
         Me.PuestoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuConsultas = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuReportes = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuAdmin = New System.Windows.Forms.ToolStripMenuItem()
         Me.GestionDeUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CambioDeContraseñaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RespaldoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.cerrarSesion = New System.Windows.Forms.ToolStripMenuItem()
         Me.opcionSalir = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -145,6 +145,12 @@ Partial Class FrmMenu
         Me.menuReportes.Text = "Reporte"
         Me.menuReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
+        'EmpleadosToolStripMenuItem
+        '
+        Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.EmpleadosToolStripMenuItem.Text = "Empleados"
+        '
         'menuAdmin
         '
         Me.menuAdmin.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GestionDeUsuarioToolStripMenuItem, Me.CambioDeContraseñaToolStripMenuItem, Me.RespaldoToolStripMenuItem})
@@ -192,12 +198,6 @@ Partial Class FrmMenu
         Me.opcionSalir.Size = New System.Drawing.Size(108, 72)
         Me.opcionSalir.Text = "Salir"
         Me.opcionSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'EmpleadosToolStripMenuItem
-        '
-        Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
-        Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
         'FrmMenu
         '
