@@ -206,6 +206,12 @@
     <Compile Include="ReportesNomina\Reporte2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ReportesNomina\Reporte3.Designer.vb">
+      <DependentUpon>Reporte3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesNomina\Reporte3.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Admin\FrmBackUp.resx">
@@ -252,8 +258,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportesNomina\Report1.rdlc" />
     <EmbeddedResource Include="ReportesNomina\Report2.rdlc" />
+    <EmbeddedResource Include="ReportesNomina\Report3.rdlc" />
     <EmbeddedResource Include="ReportesNomina\Reporte2.resx">
       <DependentUpon>Reporte2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesNomina\Reporte3.resx">
+      <DependentUpon>Reporte3.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
