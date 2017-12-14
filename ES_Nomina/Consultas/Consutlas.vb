@@ -69,6 +69,39 @@ Public Class Consutlas
             DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige
             DataGridView1.AutoResizeColumns()
         End If
+
+        If RadioButton2.Checked = True Then
+            Dim DS As New DataSet()
+            Dim DA As New SqlDataAdapter("SELECT idDepartamento As ID, NombreDepartamento As Departamento FROM Departamento
+            WHERE NombreDepartamento like '%" & TextBox1.Text & "%' ORDER BY NombreDepartamento DESC", CONN)
+            DA.Fill(DS)
+            DataGridView1.DataSource = DS.Tables(0)
+            DataGridView1.DefaultCellStyle.BackColor = Color.White
+            DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige
+            DataGridView1.AutoResizeColumns()
+        End If
+        If RadioButton3.Checked = True Then
+            Dim DS As New DataSet()
+            Dim DA As New SqlDataAdapter("SELECT idPuesto As ID, NombrePuesto As Puesto FROM Puesto
+            WHERE NombrePuesto like '%" & TextBox1.Text & "%' ORDER BY NombrePuesto DESC", CONN)
+            DA.Fill(DS)
+            DataGridView1.DataSource = DS.Tables(0)
+            DataGridView1.DefaultCellStyle.BackColor = Color.White
+            DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige
+            DataGridView1.AutoResizeColumns()
+        End If
+        If RadioButton4.Checked = True Then
+            Dim DS As New DataSet()
+            Dim DA As New SqlDataAdapter("SELECT Marcado.idMarcado As ID, Marcado.HoraMarcado As Hora, Marcado.FechaMarcado As Fecha, CASE TipoMarcado WHEN 'True' THEN 'Entrada' ELSE 'Salida' END AS Tipo, Empleados.NombreEmpleado 
+            FROM Marcado
+            INNER JOIN Empleados ON Marcado.idEmpleados = Empleados.idEmpleados
+            WHERE Empleados.idEmpleados like '%" & TextBox1.Text & "%' ORDER BY Empleados.idEmpleados DESC;", CONN)
+            DA.Fill(DS)
+            DataGridView1.DataSource = DS.Tables(0)
+            DataGridView1.DefaultCellStyle.BackColor = Color.White
+            DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige
+            DataGridView1.AutoResizeColumns()
+        End If
     End Sub
 
     Private Sub Consutlas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
