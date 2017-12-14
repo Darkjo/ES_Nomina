@@ -1,4 +1,8 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System
+Imports System.Data
+Imports System.Data.SqlClient
+Imports System.Drawing
+Imports System.Windows.Forms
 
 Public Class FrmUsuarios
 
@@ -117,7 +121,7 @@ Public Class FrmUsuarios
         If ESNomina.Empleados.Count() = 0 Then
             Me.EmpleadosTableAdapter.AGREGAR(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, CheckBox1.Checked, CheckBox2.Checked, CheckBox3.Checked, CheckBox4.Checked, CheckBox5.Checked, CheckBox6.Checked, ComboBox1.SelectedValue, ComboBox2.SelectedValue)
         Else
-            Me.EmpleadosTableAdapter.EDITAR(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, CheckBox1.Checked, CheckBox2.Checked, CheckBox3.Checked, CheckBox4.Checked, CheckBox5.Checked, CheckBox6.Checked)
+            Me.EmpleadosTableAdapter.EDITAR(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, CheckBox1.Checked, CheckBox2.Checked, CheckBox3.Checked, CheckBox4.Checked, CheckBox5.Checked, CheckBox6.Checked, ComboBox1.SelectedValue)
         End If
 
 
