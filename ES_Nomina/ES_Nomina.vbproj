@@ -194,10 +194,16 @@
     <Compile Include="Principal\SplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportesNomina\Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="ReportesNomina\Report1.Designer.vb">
+      <DependentUpon>Report1.vb</DependentUpon>
     </Compile>
-    <Compile Include="ReportesNomina\Form1.vb">
+    <Compile Include="ReportesNomina\Report1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportesNomina\Reporte2.Designer.vb">
+      <DependentUpon>Reporte2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesNomina\Reporte2.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -241,10 +247,14 @@
     <EmbeddedResource Include="Principal\SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportesNomina\Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="ReportesNomina\Report1.resx">
+      <DependentUpon>Report1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportesNomina\Report1.rdlc" />
+    <EmbeddedResource Include="ReportesNomina\Report2.rdlc" />
+    <EmbeddedResource Include="ReportesNomina\Reporte2.resx">
+      <DependentUpon>Reporte2.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Datos\ESNomina.xsc">
