@@ -41,6 +41,7 @@ Partial Class Consutlas
         Me.PuestoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MarcadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MarcadoTableAdapter = New ES_Nomina.ESNominaTableAdapters.MarcadoTableAdapter()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ESNominaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ESNomina, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,7 +67,7 @@ Partial Class Consutlas
         '
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton2.Location = New System.Drawing.Point(181, 83)
+        Me.RadioButton2.Location = New System.Drawing.Point(197, 83)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(156, 29)
         Me.RadioButton2.TabIndex = 1
@@ -78,7 +79,7 @@ Partial Class Consutlas
         '
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton3.Location = New System.Drawing.Point(343, 83)
+        Me.RadioButton3.Location = New System.Drawing.Point(379, 83)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(94, 29)
         Me.RadioButton3.TabIndex = 2
@@ -89,16 +90,16 @@ Partial Class Consutlas
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(37, 28)
+        Me.TextBox1.Location = New System.Drawing.Point(125, 28)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(357, 34)
+        Me.TextBox1.Size = New System.Drawing.Size(491, 34)
         Me.TextBox1.TabIndex = 3
         '
         'RadioButton4
         '
         Me.RadioButton4.AutoSize = True
         Me.RadioButton4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton4.Location = New System.Drawing.Point(443, 83)
+        Me.RadioButton4.Location = New System.Drawing.Point(506, 83)
         Me.RadioButton4.Name = "RadioButton4"
         Me.RadioButton4.Size = New System.Drawing.Size(110, 29)
         Me.RadioButton4.TabIndex = 5
@@ -172,11 +173,22 @@ Partial Class Consutlas
         '
         Me.MarcadoTableAdapter.ClearBeforeFill = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(40, 38)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(79, 25)
+        Me.Label1.TabIndex = 7
+        Me.Label1.Text = "Buscar:"
+        '
         'Consutlas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1059, 553)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.RadioButton4)
         Me.Controls.Add(Me.TextBox1)
@@ -218,4 +230,5 @@ Partial Class Consutlas
     Friend WithEvents PuestoBindingSource As BindingSource
     Friend WithEvents MarcadoBindingSource As BindingSource
     Friend WithEvents MarcadoTableAdapter As ESNominaTableAdapters.MarcadoTableAdapter
+    Friend WithEvents Label1 As Label
 End Class
