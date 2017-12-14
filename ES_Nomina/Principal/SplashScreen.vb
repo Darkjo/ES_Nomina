@@ -23,8 +23,8 @@ Public Class SplashScreen
         If ValidDriveLetters.IndexOf(DriveLetter) <> -1 Then
             If DriveLetter.Length = 1 Then
                 Try
-                    Dim Disk As New System.Management.ManagementObject("Win32_LogicalDisk.DeviceID=""" & DriveLetter & ":""")
-                    Dim DiskProperty As Management.PropertyData
+                    Dim Disk As New ManagementObject("Win32_LogicalDisk.DeviceID=""" & DriveLetter & ":""")
+                    Dim DiskProperty As PropertyData
                     For Each DiskProperty In Disk.Properties
                         If DiskProperty.Name = "VolumeSerialNumber" Then
                             Return DiskProperty.Value.ToString  '.ToString 'Return the volume serial number. 
@@ -41,7 +41,7 @@ Public Class SplashScreen
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         If (contador < 100) Then
             ProgressBar1.Value = contador
-            contador += 5
+            contador += 10
         Else
             Timer1.Enabled = False
             If (CheckUSB()) Then
