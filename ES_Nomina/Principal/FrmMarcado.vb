@@ -7,7 +7,7 @@ Public Class FrmMarcado
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-        Label4.Text = Date.Now.ToLongTimeString
+        Label4.Text = DateTime.Now.ToString("hh:mm:ss")
     End Sub
 
     Private Function Buscar(id As String) As DataRow
@@ -111,16 +111,9 @@ Public Class FrmMarcado
             Exit Sub
         End If
 
-        Dim fecha As Date
-        fecha = DateTime.Now.ToString("yyyy") + "/" + DateTime.Now.ToString("MM") + "/" + DateTime.Now.ToString("dd")
-
-        Dim hora As Date
-        hora = Date.Now.ToLongTimeString
-
-
-        Me.MarcadoTableAdapter.AGREGAR("08:30:12.0000000", fecha, RadioButton1.Checked, TextBox1.Text)
+        Me.MarcadoTableAdapter.AGREGAR(Label4.Text, Label3.Text, RadioButton1.Checked, TextBox1.Text)
         MessageBox.Show("Marcado Ingresado corectamente", "ES_Nomina", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-
+        Hide()
     End Sub
 End Class
 
