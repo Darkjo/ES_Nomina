@@ -53,5 +53,9 @@ Public Class SplashScreen
             End If
         End If
     End Sub
+
+    Private Sub SplashScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
 
