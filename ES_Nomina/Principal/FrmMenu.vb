@@ -71,13 +71,19 @@
     End Sub
 
     Private Sub EmpleadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmpleadosToolStripMenuItem.Click
-        Dim Puesto As New Form1()
+        Dim Puesto As New Report1()
         Puesto.MdiParent = Me
         Puesto.Show()
     End Sub
 
     Private Sub menuConsultas_Click(sender As Object, e As EventArgs) Handles menuConsultas.Click
         Dim Consult As New Consutlas()
+        Consult.MdiParent = Me
+        Consult.Show()
+    End Sub
+
+    Private Sub FechasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FechasToolStripMenuItem.Click
+        Dim Consult As New Reporte2()
         Consult.MdiParent = Me
         Consult.Show()
     End Sub

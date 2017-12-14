@@ -44,6 +44,7 @@ Partial Class FrmMenu
         Me.RespaldoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.cerrarSesion = New System.Windows.Forms.ToolStripMenuItem()
         Me.opcionSalir = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FechasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -136,7 +137,7 @@ Partial Class FrmMenu
         '
         'menuReportes
         '
-        Me.menuReportes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpleadosToolStripMenuItem})
+        Me.menuReportes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpleadosToolStripMenuItem, Me.FechasToolStripMenuItem})
         Me.menuReportes.Enabled = False
         Me.menuReportes.Image = CType(resources.GetObject("menuReportes.Image"), System.Drawing.Image)
         Me.menuReportes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
@@ -148,7 +149,7 @@ Partial Class FrmMenu
         'EmpleadosToolStripMenuItem
         '
         Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(158, 26)
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
         'menuAdmin
@@ -199,6 +200,12 @@ Partial Class FrmMenu
         Me.opcionSalir.Text = "Salir"
         Me.opcionSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
+        'FechasToolStripMenuItem
+        '
+        Me.FechasToolStripMenuItem.Name = "FechasToolStripMenuItem"
+        Me.FechasToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.FechasToolStripMenuItem.Text = "Fechas"
+        '
         'FrmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -241,4 +248,5 @@ Partial Class FrmMenu
     Friend WithEvents DepartamentoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PuestoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EmpleadosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FechasToolStripMenuItem As ToolStripMenuItem
 End Class
