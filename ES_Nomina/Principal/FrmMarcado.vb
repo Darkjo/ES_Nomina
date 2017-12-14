@@ -10,8 +10,6 @@ Public Class FrmMarcado
         Label4.Text = Date.Now.ToLongTimeString
     End Sub
 
-
-
     Private Function Buscar(id As String) As DataRow
 
         If (String.IsNullOrEmpty(id)) Then
@@ -21,7 +19,6 @@ Public Class FrmMarcado
         ' Declaramos la variable que devolverá la función, que
         ' en principio indica que no existe ningún registro
         ' que coincida con el ID especificado.
-        '
         Dim returnValue As DataRow = Nothing
 
         ' Creamos la conexión con la base de SQL Server.
@@ -97,13 +94,33 @@ Public Class FrmMarcado
             ' con los datos existentes en el objeto DataRow
             ' obtenido.
             '
-            TextBox2.Text = row("NombreEmpleados")
+            TextBox2.Text = row("NombreEmpleado")
 
         Catch ex As Exception
             ' Se ha producido un error
             MessageBox.Show(ex.Message)
 
         End Try
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'VALIDAR CAJA DE TEXTO VACIA
+        If String.IsNullOrEmpty(TextBox1.Text) Then
+            TextBox1.Focus()
+            TextBox1.BackColor = Color.Yellow
+            Exit Sub
+        End If
+
+        Dim fecha As Date
+        fecha = DateTime.Now.ToString("yyyy") + "/" + DateTime.Now.ToString("MM") + "/" + DateTime.Now.ToString("dd")
+
+        Dim hora As Date
+        hora = Date.Now.ToLongTimeString
+
+
+        Me.MarcadoTableAdapter.AGREGAR("08:30:12.0000000", fecha, RadioButton1.Checked, TextBox1.Text)
+        MessageBox.Show("Marcado Ingresado corectamente", "ES_Nomina", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
     End Sub
 End Class
 
